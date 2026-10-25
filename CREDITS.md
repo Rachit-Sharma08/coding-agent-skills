@@ -24,6 +24,7 @@ Most skills started life as somebody else's public work. Credit where it is due:
 | [Blackmagic Design](https://www.blackmagicdesign.com/) documentation | `davinci-resolve` references (folder ships AGPL-3.0) |
 | [Dietrich Gebert](https://github.com/dietrichgebert) — `@dietrichgebert/ponytail` | The Ponytail discipline skills (`ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, …) |
 | [Google — ARTEMIS](https://github.com/google/artemis) — Apache-2.0 | Basis for `artemis-android-control` |
+| [VoltAgent — awesome-design-md](https://github.com/VoltAgent/awesome-design-md) — MIT | DESIGN.md collection referenced by `awesome-design-md` (files are fetched on demand, not vendored) |
 
 Skills without a named source above were written or heavily rewritten for this collection, or
 come from authors whose license file travels with the folder. **Every folder that has its own

@@ -78,7 +78,7 @@ draw.text((M - 4, 140), "Agent", font=bold, fill=INK)
 draw.text((M - 4, 236), "Skills", font=bold, fill=INK)
 draw.rectangle((M, 348, M + 56, 354), fill=AMBER)
 
-draw.text((M, 386), "206 drop-in skills for the agents", font=body, fill=MUTED)
+draw.text((M, 386), "208 drop-in skills for the agents", font=body, fill=MUTED)
 draw.text((M, 418), "you already use.", font=body, fill=MUTED)
 
 agent_box_x = M

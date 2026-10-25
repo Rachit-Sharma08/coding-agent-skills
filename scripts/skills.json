@@ -1,5 +1,5 @@
 {
-  "skills": 207,
+  "skills": 208,
   "with_own_license": 20,
   "names": [
     "ab-testing",
@@ -15,6 +15,7 @@
     "attribution",
     "audio-intelligence",
     "audit-context-building",
+    "awesome-design-md",
     "better-auth-best-practices",
     "better-auth-security-best-practices",
     "binary-ninja-mcp-analysis",

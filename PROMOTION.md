@@ -11,7 +11,7 @@ in the places where agent users already hang out. That is what this file covers.
 
 ```bash
 gh repo edit Rachit-Sharma08/coding-agent-skills \
-  --description "207 drop-in skills for Claude Code, OpenCode, Codex and Cursor — video, design, SEO, docs, backend, security, reverse engineering." \
+  --description "208 drop-in skills for Claude Code, OpenCode, Codex and Cursor — video, design, SEO, docs, backend, security, reverse engineering." \
   --add-topic agent-skills \
   --add-topic claude-code \
   --add-topic opencode \
@@ -39,7 +39,7 @@ Then, in the GitHub UI:
 
 | Audience | Their pain | Your hook |
 | --- | --- | --- |
-| Claude Code / OpenCode users | "My agent is generic; it doesn't know my tools" | 207 skills, one clone, no plugin config |
+| Claude Code / OpenCode users | "My agent is generic; it doesn't know my tools" | 208 skills, one clone, no plugin config |
 | Agent-curious devs | "What is a skill, actually?" | `SKILL.md` explained in 10 lines + a real catalog |
 | Video/design people | "AI can't edit my footage" | `ffmpeg-skill` does cuts, captions, loudness, reframes |
 | Marketers | "AI writes slop copy" | the Corey Haines pack, credited, wired to fire on real phrasing |
@@ -65,14 +65,14 @@ banned and repos get flagged as spam.
 
 ## 3. Show HN
 
-**Title:** `Show HN: 207 agent skills for coding agents (Claude Code, OpenCode, Codex)`
+**Title:** `Show HN: 208 agent skills for coding agents (Claude Code, OpenCode, Codex)`
 
 **First comment:**
 
 > I use coding agents all day and kept rewriting the same instructions: how to cut a video with
 > ffmpeg, how to audit a page, how to not wreck a Stripe integration. So I collected them into
 > skill folders — a `SKILL.md` with a description the agent matches on, plus the instructions it
-> loads when it matches. 207 of them now, all installed and used, not scraped.
+> loads when it matches. 208 of them now, all installed and used, not scraped.
 >
 > Two things I learned building this that might be useful even if you don't want the repo:
 >
@@ -88,7 +88,7 @@ banned and repos get flagged as spam.
 ```
 Coding agents are only as good as the instructions you give them.
 
-I collected 207 of those instructions into reusable skills — video editing, SEO, Stripe,
+I collected 208 of those instructions into reusable skills — video editing, SEO, Stripe,
 Ghidra, Word docs, design systems.
 
 Free, MIT, one clone. 🧵
@@ -143,7 +143,7 @@ If one saves you an afternoon, a star helps other people find it.
 
 ## 5. Reddit / forum post (r/ClaudeAI or r/opencode)
 
-**Title:** `I put 207 agent skills in one repo — here's what actually made them fire`
+**Title:** `I put 208 agent skills in one repo — here's what actually made them fire`
 
 > Most "skill collections" fail for the same reason: the description is written like marketing
 > copy instead of a trigger. I went through mine and rewrote them to use the words people

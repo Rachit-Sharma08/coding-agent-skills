@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="assets/thumbnail.png" alt="Agent Skills — 207 skills for Claude Code, OpenCode, Codex and Cursor" width="100%">
+  <img src="assets/thumbnail.png" alt="Agent Skills — 208 skills for Claude Code, OpenCode, Codex and Cursor" width="100%">
 </p>
 
 <h1 align="center">Agent Skills</h1>
 
 <p align="center">
-  <b>207 drop-in skills that make coding agents good at the work around the code</b><br>
+  <b>208 drop-in skills that make coding agents good at the work around the code</b><br>
   Claude Code · OpenCode · Codex · Cursor · Gemini CLI · any agent that reads <code>SKILL.md</code>
 </p>
 
 <p align="center">
-  <a href="SKILLS.md"><img alt="skills" src="https://img.shields.io/badge/skills-207-4f46e5?style=flat-square"></a>
+  <a href="SKILLS.md"><img alt="skills" src="https://img.shields.io/badge/skills-208-4f46e5?style=flat-square"></a>
   <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square"></a>
   <a href="SETUP.md"><img alt="setup" src="https://img.shields.io/badge/setup-5%20minutes-f59e0b?style=flat-square"></a>
   <a href="https://github.com/Rachit-Sharma08/coding-agent-skills/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/Rachit-Sharma08/coding-agent-skills?style=flat-square&color=eab308"></a>
@@ -32,7 +32,7 @@ Hinglish, because that is how the owner talks to his agent), and the noisy ones 
 | Area | Examples |
 | --- | --- |
 | **Video & audio** | `ffmpeg-skill` (42 scripts), `video-use`, `remotion-*`, `hyperframes`, `ai-video-maker`, `transcribe`, `speech` |
-| **Design & frontend** | `impeccable`, `design-taste-frontend`, `ui-ux-pro-max`, `frontend-design`, `canvas-design`, `shadcn`, `tailwind-design-system` |
+| **Design & frontend** | `impeccable`, `design-taste-frontend`, `ui-ux-pro-max`, `awesome-design-md`, `image-to-code`, `canvas-design`, `shadcn` |
 | **Marketing & SEO** | `seo-audit`, `ai-seo`, `cro`, `copywriting`, `ads`, `emails`, `launch`, `pricing`, `geo-*` |
 | **Docs & files** | `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring` |
 | **Backend & infra** | `stripe-best-practices`, `supabase`, `neon`, `prisma-client-api`, `better-auth-*`, `workers-best-practices` |
@@ -71,7 +71,7 @@ cp -R skills/* ~/.claude/skills/
 mkdir -p .agents/skills && cp -R skills/impeccable skills/ffmpeg-skill .agents/skills/
 ```
 
-One skill, one folder — you never have to install all 207. Copy the five you will actually
+One skill, one folder — you never have to install all 208. Copy the five you will actually
 use; the agent's context stays small and it stops guessing which skill you meant.
 
 Then just ask for the work. Say *"cut this clip to 30 seconds and burn in captions"* and
@@ -119,7 +119,7 @@ once. The rule used here, and the one in the setup guide:
 
 ```
 skills/<name>/SKILL.md   the skill + its scripts, templates and references
-SKILLS.md                catalog of all 207 skills, A–Z
+SKILLS.md                catalog of all 208 skills, A–Z
 SETUP.md                 install, verify, troubleshoot
 CREDITS.md               who wrote what, and the licenses
 PROMOTION.md             launch kit (repo description, topics, ready-to-post copy)

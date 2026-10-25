@@ -1,6 +1,6 @@
 # Skill Catalog
 
-All **207** skills in this repo, A–Z. Click a skill name to open its folder;
+All **208** skills in this repo, A–Z. Click a skill name to open its folder;
 every folder has a `SKILL.md` with the full instructions the agent loads.
 
 > Regenerate this file with `python scripts/build_catalog.py` after adding or editing a skill.
@@ -20,6 +20,7 @@ every folder has a `SKILL.md` with the full instructions the agent loads.
 | [`attribution`](skills/attribution/) | Figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools. |
 | [`audio-intelligence`](skills/audio-intelligence/) | Analyze what was said in audio, not just transcribe it. |
 | [`audit-context-building`](skills/audit-context-building/) | Understand a codebase before looking for bugs in it - what each function assumes, what it guarantees, and what it depends on elsewhere. |
+| [`awesome-design-md`](skills/awesome-design-md/) | Give an agent a real brand's design system as a single DESIGN.md file, before it writes any UI. |
 | [`better-auth-best-practices`](skills/better-auth-best-practices/) | Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. |
 | [`better-auth-security-best-practices`](skills/better-auth-security-best-practices/) | Configure rate limiting, manage auth secrets, set up CSRF protection, define trusted origins, secure sessions and cookies, encrypt OAuth tokens, track IP… |
 | [`binary-ninja-mcp-analysis`](skills/binary-ninja-mcp-analysis/) | Provides Binary Ninja IL documentation and MCP server usage guidance for binary analysis and reverse engineering |
