@@ -3,7 +3,6 @@
 #   .\scripts\install.ps1 -Target claude       -> ~/.claude/skills        (Claude Code)
 #   .\scripts\install.ps1 -Target project      -> ./.agents/skills        (current repo only)
 #   .\scripts\install.ps1 -Path D:\app\.agents\skills
-#   .\scripts\install.ps1 -All                 -> every skill (default: ask-free, copies all)
 #   .\scripts\install.ps1 -Filter ffmpeg,seo   -> only folders matching these fragments
 [CmdletBinding()]
 param(
@@ -30,12 +29,12 @@ foreach ($dir in Get-ChildItem $src -Directory) {
     if ($Filter -and -not ($Filter | Where-Object { $dir.Name -like "*$_*" })) { continue }
     if (-not (Test-Path (Join-Path $dir.FullName 'SKILL.md'))) { continue }
 
-    $target = Join-Path $dest $dir.Name
-    if ((Test-Path $target) -and -not $Force) {
+    $targetPath = Join-Path $dest $dir.Name
+    if ((Test-Path $targetPath) -and -not $Force) {
         $skipped++
         continue
     }
-    Copy-Item -Recurse -Force $dir.FullName $target
+    Copy-Item -Recurse -Force $dir.FullName $targetPath
     $copied++
 }
 
