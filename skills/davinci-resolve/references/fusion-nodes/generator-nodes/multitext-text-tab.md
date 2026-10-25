@@ -1,0 +1,23 @@
+# Multitext text tab
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Multitext.
+[Chapter index](INDEX.md) / [Previous section](mandelbrot-and-multitext.md) / [Next section](multitext-layout-tab-type.md) / [Continue MultiText MTxT / Layout Tab / Type](multitext-layout-tab-type.md) / [MultiText MTxT](mandelbrot-and-multitext.md)
+<a id="source-inspector-3"></a> <a id="source-layout-tab"></a> <a id="source-multitext-layout-tab-controls"></a> <a id="source-multitext-text-tab-controls"></a> <a id="source-text-tab"></a>
+
+### Inspector
+
+### MultiText Text tab controls
+
+### Text Tab
+
+The Text section holds parameters that anyone who has worked in a word processor will recognize, covering the everyday text formatting options. Text List Acting as a master panel, the Text List shows every text layer you have made. Right from the text list panel you can enable/disable, lock, delete, and rename a layer. Just beneath the Text List sit the Add Text buttons, which offer three popular layout types — Point, Text Box, and Circle — so adding your chosen input style takes no effort. CSV lets you pull text in from a spreadsheet. Point: The text grows out from one point on the screen, free of any horizontal or vertical limits. Text Box: A bounding box pens the text in both horizontally and vertically. With Text Box chosen, you'll find the Wrap to Text Box and Clip to Text Box checkboxes on the Layout tab. Turn on Wrap to Text Box and your text automatically rolls onto the next line as it reaches the text box edge. Turn on Clip to Text Box and any text spilling past the text box's bounds is visually trimmed away, stopping overflow while leaving the excess content intact. Circle: The text follows a user-defined arc. CSV: Brings a Comma Separated Value (.csv) spreadsheet into MultiText and lays it out automatically as column-aligned text. Once it lands in MultiText, you're free to revise the titles however suits you. Font A pair of Font menus let you choose the font family and the typeface, such as Regular, Bold, and Italic.
+
+Size Reach for this control to grow or shrink the text. Emphasis This hands you a choice of underlined or strikethrough text. Color Sets the text's basic fill color. It is the very same control that appears in the Shading tab color swatch. Tracking The Tracking parameter tunes the even spacing between every text character. Align Each tab accepts left, right, or centered alignment, plus top, center, or bottom alignment. Justify Justifies the text to the left, right, center, or all. Indent Lets you raise or lower the indention level. Line Spacing Line Spacing sets the gap between each line of text — what wordprocessing applications sometimes call leading. Direction This menu offers choices for the Direction the text runs, either horizontally or vertically in either orientation, which helps certain Asian languages flow correctly during animation. Line Direction Through these menu choices you fix the text flow as one of four options: left to right, its reverse right to left, top to bottom, or the opposite bottom to top. Reading Direction Here the choices let you set the text's reading direction either automatically or by hand. You can call out left-to-right languages such as English, German, and so on, or right-to-left languages such as Arabic and Hebrew. Force Monospaced This slider control lets you override the kerning (the spacing between characters) baked into the font. Leave the slider at zero (its default) and Fusion leans wholly on the kerning carried by each character. Set it to one and the spacing between characters turns perfectly even, or monospaced. Use Font Defined Kerning This switches on the kerning laid out in the TrueType font and starts out enabled.
+
+Use Ligatures Should your font carry ligatures, switch them on here by picking All Scripts. Ligatures fuse separate letters into one glyph, as with ff and fl. When you are animating text letter by letter, you usually want those ligature letters split apart rather than merged into a single glyph, which is why None is the default for Latin characters. Some languages such as Arabic depend on ligatures to render properly and call for the Non-Latin setting. Style Can Split Ligatures Tick this box when your font offers the option to break ligatures apart. Stylistic Set When your font carries stylistic sets, you can pick them from the drop-down menu. Manual Kerning/Positioning Lets you wipe out any earlier manual kerning or positioning of the text with the matching button. Merge Apply merge compositing settings. To learn more about these controls, refer to Chapter 95, "Composite Nodes,".
+
+### MultiText Layout tab controls
+
+### Layout Tab
+
+These parameters govern where the text is positioned.

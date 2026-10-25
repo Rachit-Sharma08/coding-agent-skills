@@ -1,0 +1,10 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Metadata burn in", "file": "references/delivery/metadata-burn-in/INDEX.md", "summary": "Open when working with Metadata burn in controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Quick export", "file": "references/delivery/quick-export/INDEX.md", "summary": "Open when working with Quick export controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Delivery overview", "file": "references/delivery/delivery-overview/INDEX.md", "summary": "Open when working with Delivery overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Rendering media", "file": "references/delivery/rendering-media/INDEX.md", "summary": "Open when working with Rendering media controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Delivering dcp and imf", "file": "references/delivery/delivering-dcp-and-imf/INDEX.md", "summary": "Open when working with Delivering dcp and imf controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Delivering to tape", "file": "references/delivery/delivering-to-tape/INDEX.md", "summary": "Open when working with Delivering to tape controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Exporting timelines to other applications", "file": "references/delivery/exporting-timelines-to-other-applications/INDEX.md", "summary": "Open when working with Exporting timelines to other applications controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

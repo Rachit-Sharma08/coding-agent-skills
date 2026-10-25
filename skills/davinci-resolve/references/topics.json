@@ -1,0 +1,23 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Version and scope", "file": "references/reading-versioned-references.md", "summary": "Open when choosing between 20.3 and 21 or checking control ownership and procedure conditions.", "keywords": []},
+  {"topic": "Interface and setup", "file": "references/getting-started/INDEX.md", "summary": "Open when finding interface controls, preferences, or control-panel setup.", "keywords": []},
+  {"topic": "Projects and collaboration", "file": "references/projects/INDEX.md", "summary": "Open when managing projects, libraries, Cloud storage, review integrations, or collaboration.", "keywords": []},
+  {"topic": "Media and ingest", "file": "references/media/INDEX.md", "summary": "Open when importing, organizing, synchronizing, or describing source media.", "keywords": []},
+  {"topic": "Proxies and performance", "file": "references/performance/INDEX.md", "summary": "Open when configuring proxies, caching, or playback performance.", "keywords": []},
+  {"topic": "Color management and HDR", "file": "references/color-management/INDEX.md", "summary": "Open when setting RAW decoding, working color spaces, HDR, or output transforms.", "keywords": []},
+  {"topic": "Cut page", "file": "references/cut/INDEX.md", "summary": "Open when assembling or trimming a program on the Cut page.", "keywords": []},
+  {"topic": "Edit page", "file": "references/edit/INDEX.md", "summary": "Open when building timelines, selecting tracks, trimming clips, or editing multicamera footage.", "keywords": []},
+  {"topic": "Timeline effects and titles", "file": "references/timeline-effects/INDEX.md", "summary": "Open when adding transitions, titles, subtitles, compositing, or speed effects.", "keywords": []},
+  {"topic": "Conforming and interchange", "file": "references/conforming/INDEX.md", "summary": "Open when importing or relinking an edit and checking interchange-format support.", "keywords": []},
+  {"topic": "Fusion workflows", "file": "references/fusion/INDEX.md", "summary": "Open when building a composite, animating nodes, tracking, painting, or working with particles.", "keywords": []},
+  {"topic": "Fusion nodes and modifiers", "file": "references/fusion-nodes/INDEX.md", "summary": "Open when looking up a Fusion node, input, parameter, or modifier.", "keywords": []},
+  {"topic": "Color grading", "file": "references/color/INDEX.md", "summary": "Open when grading shots, managing grades, using qualifiers, or building color node graphs.", "keywords": []},
+  {"topic": "Resolve FX", "file": "references/resolve-fx/INDEX.md", "summary": "Open when choosing or configuring a Resolve FX effect.", "keywords": []},
+  {"topic": "Fairlight audio", "file": "references/fairlight/INDEX.md", "summary": "Open when recording, editing, mixing, routing, or automating audio in Fairlight.", "keywords": []},
+  {"topic": "Delivery and export", "file": "references/delivery/INDEX.md", "summary": "Open when rendering, exporting, adding burn-in metadata, or creating delivery packages.", "keywords": []},
+  {"topic": "Immersive and stereo video", "file": "references/immersive-and-stereo/INDEX.md", "summary": "Open when preparing Apple Immersive or stereoscopic video.", "keywords": []},
+  {"topic": "Integration and live grading", "file": "references/integration/INDEX.md", "summary": "Open when writing DCTL transforms, integrating tools, controlling transport, or grading live.", "keywords": []},
+  {"topic": "Menu reference", "file": "references/menus/INDEX.md", "summary": "Open when finding a documented menu command.", "keywords": []},
+  {"topic": "Resolve 21 new features", "file": "references/resolve-21/INDEX.md", "summary": "Open when checking features from the separate Resolve 21 guide, including the Photo page.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

@@ -1,0 +1,9 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Using the cut page", "file": "references/cut/using-the-cut-page/INDEX.md", "summary": "Open when working with Using the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Importing and organizing media in the cut page", "file": "references/cut/importing-and-organizing-media-in-the-cut-page/INDEX.md", "summary": "Open when working with Importing and organizing media in the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Fast editing in the cut page", "file": "references/cut/fast-editing-in-the-cut-page/INDEX.md", "summary": "Open when working with Fast editing in the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Trimming in the cut page", "file": "references/cut/trimming-in-the-cut-page/INDEX.md", "summary": "Open when working with Trimming in the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using the inspector in the cut page", "file": "references/cut/using-the-inspector-in-the-cut-page/INDEX.md", "summary": "Open when working with Using the inspector in the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Video and audio effects in the cut page", "file": "references/cut/video-and-audio-effects-in-the-cut-page/INDEX.md", "summary": "Open when working with Video and audio effects in the cut page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

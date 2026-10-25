@@ -1,0 +1,17 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Using the Fairlight page", "file": "references/fairlight/using-the-fairlight-page/INDEX.md", "summary": "Open when working with Using the Fairlight page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Setting up tracks busses and patching", "file": "references/fairlight/setting-up-tracks-busses-and-patching/INDEX.md", "summary": "Open when working with Setting up tracks busses and patching controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Transport controls timeline navigation and markers", "file": "references/fairlight/transport-controls-timeline-navigation-and-markers/INDEX.md", "summary": "Open when working with Transport controls timeline navigation and markers controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Recording", "file": "references/fairlight/recording/INDEX.md", "summary": "Open when working with Recording controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Adr automated dialog replacement", "file": "references/fairlight/adr-automated-dialog-replacement/INDEX.md", "summary": "Open when working with Adr automated dialog replacement controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Editing basics in the Fairlight page", "file": "references/fairlight/editing-basics-in-the-fairlight-page/INDEX.md", "summary": "Open when working with Editing basics in the Fairlight page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "The Fairlight inspector", "file": "references/fairlight/the-fairlight-inspector/INDEX.md", "summary": "Open when working with The Fairlight inspector controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Mixing in the Fairlight page", "file": "references/fairlight/mixing-in-the-fairlight-page/INDEX.md", "summary": "Open when working with Mixing in the Fairlight page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Mix automation", "file": "references/fairlight/mix-automation/INDEX.md", "summary": "Open when working with Mix automation controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Audio overview", "file": "references/fairlight/audio-overview/INDEX.md", "summary": "Open when working with Audio overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Fairlight FX", "file": "references/fairlight/fairlight-fx/INDEX.md", "summary": "Open when working with Fairlight FX controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Audio meters and audio monitoring", "file": "references/fairlight/audio-meters-and-audio-monitoring/INDEX.md", "summary": "Open when working with Audio meters and audio monitoring controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Signal flow diagrams", "file": "references/fairlight/signal-flow-diagrams/INDEX.md", "summary": "Open when working with Signal flow diagrams controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Immersive audio workflows", "file": "references/fairlight/immersive-audio-workflows/INDEX.md", "summary": "Open when working with Immersive audio workflows controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

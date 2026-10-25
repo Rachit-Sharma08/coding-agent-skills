@@ -1,0 +1,24 @@
+# demo / test output
+examples/out/
+demos/out/
+tests/out/
+*.log
+
+# python
+__pycache__/
+*.pyc
+
+# node
+node_modules/
+package-lock.json
+
+# editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# downloaded real-world corpus
+tests/corpus/
+
+# eval staging (fixtures, prompts, per-run outputs) -- not part of the repo
+scratchpad/

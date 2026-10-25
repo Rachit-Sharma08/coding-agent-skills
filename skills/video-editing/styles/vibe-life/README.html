@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frame Pack</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  h2 { font-size: 16px; margin: 28px 0 8px; text-transform: uppercase; letter-spacing: 0.04em; color: #666; }
+  p, li { font-size: 15px; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; background: #f4f4f5; padding: 1px 6px; border-radius: 4px; }
+  ul { padding-left: 0; list-style: none; }
+  li { margin: 16px 0; padding: 14px 16px; border: 1px solid #e5e5e7; border-radius: 8px; }
+  li strong { display: block; margin-bottom: 4px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pill-include { background: #e6f4ea; color: #137333; }
+  .pill-preview { background: #fef7e0; color: #8a6300; }
+</style>
+</head>
+<body>
+<h1>Frame Pack</h1>
+<p>This pack contains your composed frame plus two visual previews.</p>
+
+<h2>Files</h2>
+<ul>
+  <li>
+    <strong><code>FRAME.md</code> <span class="pill pill-include">Include in HyperFrames project</span></strong>
+    Video-first frame spec with YAML component tokens and composition notes appended. This is the source of truth for the frame — HyperFrames reads from it when building compositions.
+  </li>
+  <li>
+    <strong><code>frame-showcase.html</code> <span class="pill pill-preview">Preview only</span></strong>
+    Storyboard contact sheet — every frame rendered at true frame proportions on a gallery ground, sized via <code>cqw</code>. Use it to review the storyboard alongside the spec. Do <em>not</em> include this in your HyperFrames project.
+  </li>
+  <li>
+    <strong><code>design-showcase.html</code> <span class="pill pill-preview">Preview only</span></strong>
+    Visual design system preview — palette, typography, components, and composition examples. Use it as a brand reference. Do <em>not</em> include this in your HyperFrames project.
+  </li>
+</ul>
+</body>
+</html>

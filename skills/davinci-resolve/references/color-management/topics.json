@@ -1,0 +1,7 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Camera raw settings", "file": "references/color-management/camera-raw-settings/INDEX.md", "summary": "Open when working with Camera raw settings controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Data levels color management and ACES", "file": "references/color-management/data-levels-color-management-and-aces/INDEX.md", "summary": "Open when working with Data levels color management and ACES controls, procedures, or conditions.", "keywords": []},
+  {"topic": "HDR setup and grading", "file": "references/color-management/hdr-setup-and-grading/INDEX.md", "summary": "Open when working with HDR setup and grading controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Image sizing and resolution independence", "file": "references/color-management/image-sizing-and-resolution-independence/INDEX.md", "summary": "Open when working with Image sizing and resolution independence controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

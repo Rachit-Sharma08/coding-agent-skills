@@ -1,0 +1,14 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Using variables and keywords", "file": "references/media/using-variables-and-keywords/INDEX.md", "summary": "Open when working with Using variables and keywords controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using the media page", "file": "references/media/using-the-media-page/INDEX.md", "summary": "Open when working with Using the media page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Adding and organizing media with the media pool", "file": "references/media/adding-and-organizing-media-with-the-media-pool/INDEX.md", "summary": "Open when working with Adding and organizing media with the media pool controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using clip metadata", "file": "references/media/using-clip-metadata/INDEX.md", "summary": "Open when working with Using clip metadata controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using the inspector in the media page", "file": "references/media/using-the-inspector-in-the-media-page/INDEX.md", "summary": "Open when working with Using the inspector in the media page controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Syncing audio and video", "file": "references/media/syncing-audio-and-video/INDEX.md", "summary": "Open when working with Syncing audio and video controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Modifying clips and clip attributes", "file": "references/media/modifying-clips-and-clip-attributes/INDEX.md", "summary": "Open when working with Modifying clips and clip attributes controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using scene detection", "file": "references/media/using-scene-detection/INDEX.md", "summary": "Open when working with Using scene detection controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Ingesting from tape", "file": "references/media/ingesting-from-tape/INDEX.md", "summary": "Open when working with Ingesting from tape controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Capturing from the cintel film scanner", "file": "references/media/capturing-from-the-cintel-film-scanner/INDEX.md", "summary": "Open when working with Capturing from the cintel film scanner controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Media management", "file": "references/media/media-management/INDEX.md", "summary": "Open when working with Media management controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

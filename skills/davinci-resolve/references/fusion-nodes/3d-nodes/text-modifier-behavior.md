@@ -1,0 +1,11 @@
+# Text modifier behavior
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Text 3D.
+[Chapter index](INDEX.md) / [Previous section](text-3d-text-tab.md) / [Text 3D 3Txt](soft-clip-and-spherical-camera-and-text-3d.md) / [Next section](transform-3d-and-triangulate-3d.md)
+<a id="source-3d-nodes-part-8"></a> <a id="source-text-3d-modifiers"></a>
+
+### Text 3D Modifiers
+
+A right-click inside the Styled Text box brings up a menu listing the text modifiers below. A given Text 3D Styled Text box accepts only a single modifier at a time. What follows is a short rundown of the modifiers that are specific to text. Additional detail lives in Chapter 124, “Modifiers,” in the DaVinci Resolve Reference Manual, or in Chapter 64 of the Fusion Reference Manual. Animate Apply the Animate command to drop a keyframe on the text you typed and let the content change as time advances.
+
+Character Level Styling Direct Character Level Styling isn’t available on the Text 3D node. As a workaround, build a Text+ node first and adjust its text field through a Character Level Styling modifier. From there you can either link the Text 3D’s text field to the modifier that has now become available, or duplicate the Text+ node and transfer its values into the Text 3D node (right-click > Paste Settings) Comp Name Comp Name drops the composition’s name into the Styled Text box and serves mainly as a fast way to build slates. Follower Follower is a text modifier that lets you stagger an animation so it cascades across each individual character of the text. Consult “Text Modifiers” near this chapter’s close. Publish Publish the text so other text nodes can link to it. Text Scramble A text modifier ID that shuffles the characters of the text at random. Consult “Text Modifiers” near this chapter’s close. Text Timer A text modifier that counts down from a chosen duration or, alternatively, shows today’s date plus the time. Consult “Text Modifiers” near this chapter’s close. Time Code A text modifier that prints Time Code corresponding to the active frame. Consult “Text Modifiers” near this chapter’s close. Connect To Choose this to wire the text produced by this Text node into the published output belonging to a different node.

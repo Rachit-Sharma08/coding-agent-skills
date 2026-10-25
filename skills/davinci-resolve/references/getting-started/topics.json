@@ -1,0 +1,8 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Manual navigation", "file": "references/getting-started/manual-navigation/INDEX.md", "summary": "Open when working with Manual navigation controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Introduction to DaVinci resolve", "file": "references/getting-started/introduction-to-davinci-resolve/INDEX.md", "summary": "Open when working with Introduction to DaVinci resolve controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using the DaVinci resolve user interface", "file": "references/getting-started/using-the-davinci-resolve-user-interface/INDEX.md", "summary": "Open when working with Using the DaVinci resolve user interface controls, procedures, or conditions.", "keywords": []},
+  {"topic": "System and user preferences", "file": "references/getting-started/system-and-user-preferences/INDEX.md", "summary": "Open when working with System and user preferences controls, procedures, or conditions.", "keywords": []},
+  {"topic": "DaVinci control panels setup", "file": "references/getting-started/davinci-control-panels-setup/INDEX.md", "summary": "Open when working with DaVinci control panels setup controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

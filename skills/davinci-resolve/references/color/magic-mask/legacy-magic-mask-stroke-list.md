@@ -1,0 +1,10 @@
+# Magic mask v1 legacy version managing strokes in the stroke list
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Magic mask v1 legacy version.
+[Chapter index](INDEX.md) / [Previous section](magic-mask-v1-legacy-version-identifying-more-than-one-person.md) / [Next section](magic-mask-v1-legacy-version-stroke-duration.md) / [Magic Mask v1 (Legacy Version)](magic-mask-v2-and-magic-mask-v1-legacy-version.md)
+<a id="source-magic-mask-part-3"></a> <a id="source-managing-strokes-in-the-stroke-list"></a>
+
+### Managing Strokes in the Stroke List
+
+
+Each stroke you draw shows up in the Stroke list. Strokes are set, by default, to persist for as long as their clip runs, so a stroke placed on a stationary figure needs no motion tracking at all. Person mode collects every stroke into a single long list, whereas Features mode arranges them hierarchically, grouping the strokes belonging to each feature beneath that feature’s title. After a stroke lands in this list, the controls below become available to it. Enable/disable feature: Within Features mode, drawing your first stroke for a given feature causes that feature’s title to appear, and all of that feature’s strokes are grouped beneath it. Beside the feature name sits a toggle that switches that feature’s share of the overall mask on or off. Enable/disable stroke: A blue dot accompanies every stroke in the list, letting you switch that one stroke’s share of the overall mask on or off. Stroke Timeline Area with Stroke Tracks: Each stroke gets a stroke track that helps you monitor and adjust the animation of strokes as they follow camera and subject motion. Glancing at the blue or red frames in a track tells you immediately how far each stroke has been motion tracked; positive strokes show blue frames and negative strokes show red ones. These tracks also serve to mark frames where you want a stroke’s share of the final mask muted, and to record which frames you have already muted. Within a stroke track you can draw a bounding box spanning as many frames and as many strokes as you wish in order to delete motion tracking from them.

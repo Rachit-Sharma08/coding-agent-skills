@@ -1,0 +1,41 @@
+# Z to disparity and common controls
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Z to disparity, Common controls.
+[Chapter index](INDEX.md) / [Z To Disparity Z2D](stereo-align-and-z-to-disparity.md)
+<a id="source-artistic-camera-mode"></a> <a id="source-camera-tab"></a> <a id="source-common-controls"></a> <a id="source-controls-tab"></a> <a id="source-settings-tab"></a> <a id="source-stereo-nodes-part-3"></a> <a id="source-the-common-controls"></a> <a id="source-the-common-settings-stereo-3d-settings-tab"></a> <a id="source-the-z-to-disparity-camera-tab"></a> <a id="source-the-z-to-disparity-controls-tab"></a>
+
+### The Z To Disparity Controls tab
+
+### Controls Tab
+
+Within the Controls tab you'll find parameters that fine-tune how the conversion is calculated. Output Disparity To RGB Aside from writing disparity figures into the disparity channel, switching this checkbox on makes Z To Disparity additionally place those figures into the color channels formatted as {x, y, 0, 1}. Turning it on automatically bumps the RGBA color channels up to float32. It comes in handy when you simply want a fast preview of how the disparity channel appears. Refine Disparity Sharpens the Disparity map by referencing the RGB channels. Strength Pushing this slider higher accomplishes two effects at once: it evens out depth across regions of uniform color, and it shifts edges in the Z channel so they line up with the matching edges in the RGB channels. The drawback of raising the refinement is that detail from the color channel can bleed through into the Z channel, so striking a compromise between the two is what you're after. Radius Sets the pixel-radius governing the smoothing algorithm. Stack Mode With Stack Mode active, the L and R outputs both emit the identical image.
+
+When HiQ is disabled, interpolation falls back to nearest-neighbor sampling, which yields a grainier, more “noisy” outcome. Swap Eyes Lets you readily exchange the left and right eye outputs.
+
+### The Z To Disparity Camera tab
+
+### Camera Tab
+
+The Camera tab holds parameters for picking a camera and, where needed, defining its conversion point. Camera Mode Should you require accurate real-world disparity figures because your goal is matching an effect to a pre-existing scene, reach for the External setting to obtain precise disparity values. Choosing External adds a magenta camera input on the node, letting you wire up an existing stereo Camera 3D node and rely on its Camera settings to drive the Disparity settings. When any disparity will do and the exact scaling or offset isn't a concern, or when no camera is on hand, the Artistic setting can serve you well.
+
+### Artistic Camera mode
+
+Camera Should you feed a Merge 3D node holding several cameras into the camera input, the Camera menu lets you pick which one to use. Lacking a camera, you can tweak the artistic controls to build a custom disparity channel whose figures won't be physically accurate yet remain serviceable for compositing tricks. Two controls are available to adjust: Convergence Point The Z value of the convergence plane. It maps to the negation of the Convergence Distance control found in Camera 3D. At that distance, an object sits in precisely the same spot in both the left and right eyes (in other words, zero disparity). Nearer objects seem to leap out of the screen, while more distant ones recede behind it.
+
+Background Disparity (Sample from Left Eye) The disparity belonging to objects sitting in the far background. Treat it as the ceiling on disparity figures for anything at infinity. This figure ought to be taken from the left eye; its counterpart in the right eye carries the same magnitude but with a negative sign.
+
+### Common Controls
+
+Settings Tab You'll find the Settings tab in the Inspector repeated across the other Stereo nodes as well. Full descriptions of these shared controls appear below in the “The Common Controls” section.
+
+### The Common Controls
+
+Nearly every tool in Fusion carries the Common Settings tab. What follows are the settings that pertain specifically to Stereo nodes.
+
+### Settings Tab
+
+### The Common Settings Stereo 3D Settings tab
+
+Blend The Blend control mixes between the image fed into the tool and the tool's finished, altered output. Set the blend figure to 0.0 and the result matches the source exactly. Ordinarily that prompts the tool to bypass processing altogether, passing the input directly through to the output. Process When Blend Is 0.0 Forces the tool to run even when the input figure is zero. That's handy when a node has been scripted to kick off a task yet its value sits at 0.0. Red/Green/Blue/Alpha Channel Selector These four buttons confine the tool's effect to the chosen color channels. The filtering typically happens once the tool has finished its work. Say you deselect the Red button on a Blur tool: the blur runs across the whole image first, and afterward the red channel from the unprocessed source is laid back over the result's red channel. Certain tools behave differently, where deselecting a channel makes them bypass that channel during processing outright. Those tools usually carry a matching set of RGBA buttons over on their Controls tab, in which case the Settings-tab buttons and the Controls-tab buttons are one and the same. Apply Mask Inverted Switching on the Apply Mask Inverted option flips the tool's entire mask channel. That mask channel is the aggregate of every mask either wired into or built within a node. Multiply by Mask Picking this option multiplies the masked image's RGB figures by the figures held in the mask channel. As a result, every pixel left out of the mask (that is, set to 0) turns black/transparent. Use Object/Use Material (Checkboxes) Certain 3D applications can render to file formats carrying extra channels. The EXR file format, in particular, accommodates Object ID and Material ID channels, which serve as a mask for the effect. These checkboxes govern whether those channels get used, assuming they're present. Which precise Material ID or Object ID is affected gets chosen via the next group of controls. Correct Edges This checkbox surfaces only once the Use Object or Use Material checkboxes are ticked. It switches the technique used for handling overlapping object edges within a multi-object image. Switched on, the Coverage and Background Color channels are drawn upon to isolate and refine the effect along an object's edge. Leave it off (or have no Coverage or Background Color channels at hand) and aliasing can crop up along the mask's edge. For a deeper look at the Coverage and Background Color channels, the DaVinci Resolve Reference Manual covers them in Chapter 78, "Understanding Image Channels," while the Fusion Reference Manual addresses the topic in Chapter 18.
+
+Object ID/Material ID (Sliders) These sliders let you pick which ID drives the mask built from an image's object or material channels. The Sample button works just like the Color Picker, pulling IDs from whatever image sits in the viewer. The image or sequence has to have been rendered out of a 3D software package that included those channels. Hide Incoming Connections Ticking this checkbox can conceal the connection lines coming from upstream nodes, giving a node tree a tidier, more legible look. With it on, the Inspector shows an empty field for each of a node's inputs. Dragging a connected node out of the node tree and onto the field hides that incoming connection line, provided the node stays unselected in the node tree; selecting the node in the tree brings the line back. Comments The Comments field lets you attach notes to a tool. Click into the blank field and enter your text. Once a note exists on a tool, a tiny red square shows up in the node's lower-left corner while the full tile is on display, or a small text-bubble icon appears at the right when nodes are collapsed. Hover the mouse pointer over the node in the Node Editor to surface the note as a tooltip. Scripts Each tool in Fusion offers three Scripting fields on the Settings tab. Every one holds an edit box where you can enter scripts that run as the tool renders. For fuller guidance on scripting nodes, refer to the Fusion scripting documentation.

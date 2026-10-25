@@ -1,0 +1,486 @@
+{
+  "shopifyql": [
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    }
+  ],
+  "admin": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "storefront-graphql": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "partner": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "customer": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "payments-apps": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "polaris-app-home": [
+    {
+      "name": "v2.0",
+      "releaseCandidate": true
+    },
+    {
+      "name": "v1.1",
+      "latestVersion": true
+    },
+    {
+      "name": "v1.0"
+    }
+  ],
+  "polaris-admin-extensions": [
+    {
+      "name": "2026-10",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-07",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    },
+    {
+      "name": "2025-07"
+    }
+  ],
+  "polaris-checkout-extensions": [
+    {
+      "name": "2026-10",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-07",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    },
+    {
+      "name": "2025-07"
+    }
+  ],
+  "polaris-customer-account-extensions": [
+    {
+      "name": "2026-10",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-07",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    },
+    {
+      "name": "2025-07"
+    }
+  ],
+  "pos-ui": [
+    {
+      "name": "2026-10",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-07",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    },
+    {
+      "name": "2025-07"
+    }
+  ],
+  "hydrogen": [
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    },
+    {
+      "name": "2025-10"
+    },
+    {
+      "name": "2025-07"
+    }
+  ],
+  "storefront-web-components": [],
+  "functions_cart_checkout_validation": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_cart_transform": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_delivery_customization": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_discount": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_fulfillment_constraints": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_local_pickup_delivery_option_generator": [
+    {
+      "name": "unstable",
+      "latestVersion": true
+    }
+  ],
+  "functions_order_discounts": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_order_routing_location_rule": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_payment_customization": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_pickup_point_delivery_option_generator": [
+    {
+      "name": "unstable",
+      "latestVersion": true
+    }
+  ],
+  "functions_product_discounts": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ],
+  "functions_shipping_discounts": [
+    {
+      "name": "unstable"
+    },
+    {
+      "name": "2027-01",
+      "releaseCandidate": true
+    },
+    {
+      "name": "2026-10",
+      "latestVersion": true
+    },
+    {
+      "name": "2026-07"
+    },
+    {
+      "name": "2026-04"
+    },
+    {
+      "name": "2026-01"
+    }
+  ]
+}

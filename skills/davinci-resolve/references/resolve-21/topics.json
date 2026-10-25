@@ -1,0 +1,11 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Release overview", "file": "references/resolve-21/release-overview/INDEX.md", "summary": "Open when working with Release overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Photo", "file": "references/resolve-21/photo/INDEX.md", "summary": "Open when working with Photo controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Ai tools", "file": "references/resolve-21/ai-tools/INDEX.md", "summary": "Open when working with Ai tools controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Editing", "file": "references/resolve-21/editing/INDEX.md", "summary": "Open when working with Editing controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Color and keyframing", "file": "references/resolve-21/color-and-keyframing/INDEX.md", "summary": "Open when working with Color and keyframing controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Audio", "file": "references/resolve-21/audio/INDEX.md", "summary": "Open when working with Audio controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Compositing", "file": "references/resolve-21/compositing/INDEX.md", "summary": "Open when working with Compositing controls, procedures, or conditions.", "keywords": []},
+  {"topic": "General improvements", "file": "references/resolve-21/general-improvements/INDEX.md", "summary": "Open when working with General improvements controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

@@ -1,0 +1,8 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Preparing timelines for import and comparison", "file": "references/conforming/preparing-timelines-for-import-and-comparison/INDEX.md", "summary": "Open when working with Preparing timelines for import and comparison controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Conforming and relinking clips", "file": "references/conforming/conforming-and-relinking-clips/INDEX.md", "summary": "Open when working with Conforming and relinking clips controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Conforming overview", "file": "references/conforming/conforming-overview/INDEX.md", "summary": "Open when working with Conforming overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Conforming aaf files", "file": "references/conforming/conforming-aaf-files/INDEX.md", "summary": "Open when working with Conforming aaf files controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Conforming edl files", "file": "references/conforming/conforming-edl-files/INDEX.md", "summary": "Open when working with Conforming edl files controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

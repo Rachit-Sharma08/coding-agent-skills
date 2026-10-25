@@ -1,0 +1,5 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Stereoscopic workflows", "file": "references/immersive-and-stereo/stereoscopic-workflows/INDEX.md", "summary": "Open when working with Stereoscopic workflows controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Apple immersive workflow", "file": "references/immersive-and-stereo/apple-immersive-workflow/INDEX.md", "summary": "Open when working with Apple immersive workflow controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

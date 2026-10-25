@@ -1,0 +1,1174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibe Life — Frame Showcase</title>
+<style>
+/* ============================================================
+   :root mirrors FRAME.md `colors` tokens exactly.
+   ============================================================ */
+:root{
+  --od-bg:#f3ecd9;
+  --od-bg-deep:#ece2c9;
+  --od-surface:#faf6ec;
+  --od-fg:#161513;
+  --od-muted:#2a2622;
+  --od-line:#1b1a18;
+  --od-accent:#f0a87a;
+  --od-accent-strong:#e88c5a;
+  --od-agent-text:#5b7a4a;
+  --od-agent-voice:#f0c860;
+  --od-agent-video:#b8c8d8;
+  --od-agent-edit:#6b4a7a;
+  --od-light-ribbon:#161513;
+  --od-light-highlight:#f0c860;
+  --od-light-highlight-peach:#f0a87a;
+
+  --font-display:"Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif:"Instrument Serif", "Times New Roman", Georgia, serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html{background:#0e0e0e;}
+body{
+  font-family:var(--font-display);
+  color:var(--od-fg);
+  background:#0e0e0e;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:geometricPrecision;
+}
+
+/* ============================================================
+   COVER — full-bleed 16:9 identity frame. First in body.
+   No section label, no h1 wrapper. The cover IS Treatment 1.
+   ============================================================ */
+.cover-frame{
+  width:100%;
+  aspect-ratio:16/9;
+  container-type:size;
+  background:var(--od-bg);
+  position:relative;
+  overflow:hidden;
+}
+.cover-inner{
+  position:absolute; inset:0;
+  padding:5cqw;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2cqw;
+}
+.cover-chip{
+  position:absolute;
+  top:5cqw; left:50%; transform:translateX(-50%);
+  background:var(--od-surface);
+  color:var(--od-fg);
+  border:0.16cqw solid var(--od-fg);
+  border-radius:999px;
+  font-family:var(--font-mono);
+  font-size:1.4cqw;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  padding:0.9cqw 1.8cqw;
+  white-space:nowrap;
+}
+.cover-wordmark{
+  display:flex;
+  align-items:baseline;
+  gap:2.2cqw;
+  line-height:0.84;
+}
+.cover-wordmark .word{
+  font-family:var(--font-display);
+  font-size:30cqw;
+  font-weight:500;
+  letter-spacing:-1.6cqw;
+  color:var(--od-fg);
+  line-height:0.84;
+}
+.cover-wordmark .pill{
+  background:var(--od-accent);
+  color:var(--od-fg);
+  border-radius:999px;
+  padding:0.4cqw 2.2cqw;
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:14cqw;
+  line-height:0.92;
+  letter-spacing:-0.2cqw;
+  display:inline-block;
+  white-space:nowrap;
+}
+.cover-foot{
+  position:absolute;
+  bottom:5cqw; left:5cqw; right:5cqw;
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--font-mono);
+  font-size:1.4cqw;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--od-fg);
+}
+
+/* ============================================================
+   DOC CHROME — branded wrapper for the post-cover sections.
+   ============================================================ */
+.doc{
+  background:var(--od-bg);
+  border-top:0.6vw solid var(--od-fg);
+  padding:120px 96px 160px;
+  max-width:1640px;
+  margin:0 auto;
+}
+.doc-section{
+  padding:96px 0 64px;
+  border-top:1.5px solid var(--od-fg);
+}
+.doc-section:first-of-type{ border-top:none; padding-top:24px; }
+
+.section-head{
+  display:flex; align-items:baseline; gap:28px;
+  margin-bottom:64px;
+}
+.section-head .idx{
+  font-family:var(--font-mono);
+  font-size:14px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--od-fg);
+  background:var(--od-surface);
+  border:1.5px solid var(--od-fg);
+  border-radius:999px;
+  padding:8px 18px;
+  box-shadow:0 2px 0 var(--od-fg);
+  white-space:nowrap;
+}
+.section-head .title{
+  font-family:var(--font-display);
+  font-size:64px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-0.02em;
+  color:var(--od-fg);
+}
+.section-head .title em{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-weight:400;
+  background:var(--od-accent);
+  padding:0 24px;
+  border-radius:999px;
+  margin-left:8px;
+}
+.section-head .tag{
+  margin-left:auto;
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--od-muted);
+}
+
+.section-intro{
+  font-family:var(--font-display);
+  font-size:20px;
+  line-height:1.5;
+  max-width:780px;
+  margin-bottom:48px;
+  color:var(--od-muted);
+}
+
+/* ============================================================
+   PALETTE — ruled swatch grid
+   ============================================================ */
+.palette-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:0;
+  border:1.5px solid var(--od-fg);
+  border-radius:24px;
+  overflow:hidden;
+  background:var(--od-surface);
+  box-shadow:0 3px 0 var(--od-fg);
+}
+.swatch{
+  border-right:1.5px solid var(--od-fg);
+  border-bottom:1.5px solid var(--od-fg);
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:64px;
+  min-height:200px;
+}
+.swatch:nth-child(4n){ border-right:none; }
+.swatch:nth-last-child(-n+4){ border-bottom:none; }
+.swatch-chip{
+  height:96px;
+  border:1.5px solid var(--od-fg);
+  border-radius:14px;
+}
+.swatch-meta{
+  display:flex; flex-direction:column; gap:6px;
+}
+.swatch .token{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--od-muted);
+}
+.swatch .hex{
+  font-family:var(--font-mono);
+  font-size:13px;
+  font-weight:500;
+  color:var(--od-fg);
+}
+.swatch .role{
+  font-family:var(--font-display);
+  font-size:14px;
+  color:var(--od-muted);
+  margin-top:4px;
+  line-height:1.4;
+}
+
+/* ============================================================
+   TYPOGRAPHY — branded ruled rows
+   ============================================================ */
+.type-stack{
+  border:1.5px solid var(--od-fg);
+  border-radius:24px;
+  background:var(--od-surface);
+  box-shadow:0 3px 0 var(--od-fg);
+  overflow:hidden;
+}
+.type-row{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:32px;
+  padding:32px 32px;
+  border-bottom:1.5px solid var(--od-fg);
+  align-items:baseline;
+}
+.type-row:last-child{ border-bottom:none; }
+.type-meta{
+  display:flex; flex-direction:column; gap:8px;
+}
+.type-meta .name{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--od-fg);
+}
+.type-meta .spec{
+  font-family:var(--font-mono);
+  font-size:11px;
+  color:var(--od-muted);
+  line-height:1.6;
+}
+.type-spec-hero{ font-family:var(--font-display); font-size:88px; font-weight:500; line-height:0.92; letter-spacing:-0.03em; color:var(--od-fg); }
+.type-spec-claim{ font-family:var(--font-display); font-size:60px; font-weight:500; line-height:0.96; letter-spacing:-0.02em; color:var(--od-fg); }
+.type-spec-serif{ font-family:var(--font-serif); font-style:italic; font-size:72px; line-height:0.92; color:var(--od-fg); }
+.type-spec-section{ font-family:var(--font-display); font-size:40px; font-weight:500; line-height:1; letter-spacing:-0.01em; color:var(--od-fg); }
+.type-spec-body{ font-family:var(--font-display); font-size:22px; font-weight:400; line-height:1.5; color:var(--od-fg); max-width:560px; }
+.type-spec-mono{ font-family:var(--font-mono); font-size:18px; font-weight:500; text-transform:uppercase; letter-spacing:0.16em; color:var(--od-fg); }
+
+/* ============================================================
+   COMPONENTS — every frontmatter component as a CSS class.
+   These are the renderable mirrors of the tokens.
+   ============================================================ */
+.comp-section .cluster{
+  display:flex; flex-wrap:wrap; gap:24px; align-items:center;
+  padding:32px;
+  border:1.5px solid var(--od-fg);
+  border-radius:24px;
+  background:var(--od-bg-deep);
+  margin-bottom:24px;
+  box-shadow:0 3px 0 var(--od-fg);
+}
+.cluster-label{
+  flex-basis:100%;
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--od-muted);
+  margin-bottom:8px;
+}
+
+/* Frontmatter component classes (chrome-scale rendering) */
+.c-pill-nav{
+  background:var(--od-surface); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:13px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:10px 22px; box-shadow:0 2px 0 var(--od-fg);
+  display:inline-block; white-space:nowrap;
+}
+.c-pill-nav-active{
+  background:var(--od-fg); color:var(--od-bg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:13px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:10px 22px; box-shadow:0 2px 0 var(--od-fg);
+  display:inline-block; white-space:nowrap;
+}
+.c-chip-mono{
+  background:var(--od-surface); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:12px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:8px 18px; display:inline-block; white-space:nowrap;
+}
+.c-chip-peach{ background:var(--od-accent); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:12px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:8px 18px; display:inline-block; white-space:nowrap;
+}
+.c-chip-butter{ background:var(--od-agent-voice); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:12px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:8px 18px; display:inline-block; white-space:nowrap;
+}
+.c-chip-moss{ background:var(--od-agent-text); color:var(--od-bg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:12px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:8px 18px; display:inline-block; white-space:nowrap;
+}
+.c-button-primary{
+  background:var(--od-fg); color:var(--od-bg);
+  border:1.5px solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:13px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  padding:14px 30px; box-shadow:0 2px 0 var(--od-fg);
+  display:inline-flex; align-items:center; gap:10px; white-space:nowrap;
+}
+.c-button-primary .bauble{
+  display:inline-block; width:10px; height:10px; border-radius:999px; background:var(--od-bg);
+}
+.c-card-paper{
+  background:var(--od-surface); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:24px;
+  padding:24px; box-shadow:0 3px 0 var(--od-fg);
+  min-width:240px;
+}
+.c-card-cream-deep{
+  background:var(--od-bg-deep); color:var(--od-fg);
+  border:1.5px solid var(--od-fg); border-radius:24px;
+  padding:24px; box-shadow:0 3px 0 var(--od-fg);
+  min-width:240px;
+}
+.c-highlight-peach-pill{
+  background:var(--od-accent); color:var(--od-fg);
+  border-radius:999px; padding:2px 22px;
+  font-family:var(--font-serif); font-style:italic; font-size:48px; line-height:1;
+  display:inline-block; white-space:nowrap;
+}
+.c-highlight-butter-pill{
+  background:var(--od-agent-voice); color:var(--od-fg);
+  border-radius:999px; padding:2px 22px;
+  font-family:var(--font-serif); font-style:italic; font-size:48px; line-height:1;
+  display:inline-block; white-space:nowrap;
+}
+.c-state-dot{
+  display:inline-block; width:12px; height:12px;
+  border:1.5px solid var(--od-fg); border-radius:999px;
+}
+.c-state-dot.moss{ background:var(--od-agent-text); }
+.c-state-dot.butter{ background:var(--od-agent-voice); }
+.c-state-dot.sky{ background:var(--od-agent-video); }
+.c-state-dot.plum{ background:var(--od-agent-edit); }
+
+.comp-caption{
+  font-family:var(--font-mono); font-size:11px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em;
+  color:var(--od-muted); margin-top:8px;
+}
+
+/* ============================================================
+   STORYBOARD CONTACT SHEET — calm gallery of frames.
+   Each frame is 16:9, container-type:size, internal cqw sizing.
+   ============================================================ */
+.storyboard{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(540px, 1fr));
+  gap:64px 56px;
+}
+.plate{
+  display:flex; flex-direction:column; gap:18px;
+}
+.frame{
+  width:100%;
+  aspect-ratio:16/9;
+  container-type:size;
+  border:1.5px solid var(--od-fg);
+  border-radius:8px;
+  overflow:hidden;
+  background:var(--od-bg);
+  box-shadow:0 6px 0 var(--od-fg);
+  position:relative;
+}
+.frame-inner{ position:absolute; inset:0; }
+.label-rail{
+  display:flex; justify-content:space-between; align-items:baseline; gap:24px;
+  padding-top:4px;
+  border-top:1.5px solid var(--od-fg);
+  padding-top:14px;
+}
+.label-rail .name{
+  font-family:var(--font-display);
+  font-size:22px; font-weight:500; color:var(--od-fg); line-height:1.1;
+  letter-spacing:-0.01em;
+}
+.label-rail .name em{ font-family:var(--font-serif); font-style:italic; font-weight:400; }
+.label-rail .meta{
+  font-family:var(--font-mono);
+  font-size:11px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.18em;
+  color:var(--od-muted); text-align:right; white-space:nowrap;
+}
+.label-rail .arch{ display:block; color:var(--od-fg); }
+.label-rail .density{ display:block; margin-top:4px; }
+
+/* ---- Frame 1 (also used by cover) — identity ---- */
+.t1{ background:var(--od-bg); }
+.t1 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2cqw; }
+.t1 .chip{ position:absolute; top:5cqw; left:50%; transform:translateX(-50%); }
+.t1 .wm{ display:flex; align-items:baseline; gap:2.2cqw; line-height:0.84; }
+.t1 .wm .word{ font-family:var(--font-display); font-size:30cqw; font-weight:500; line-height:0.84; letter-spacing:-1.6cqw; color:var(--od-fg); }
+.t1 .wm .pill{ background:var(--od-accent); color:var(--od-fg); border-radius:999px; padding:0.4cqw 2.2cqw;
+  font-family:var(--font-serif); font-style:italic; font-size:14cqw; line-height:0.92; letter-spacing:-0.2cqw; display:inline-block; white-space:nowrap; }
+.t1 .foot{ position:absolute; bottom:5cqw; left:5cqw; right:5cqw; display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500; text-transform:uppercase; letter-spacing:0.16em; color:var(--od-fg); }
+
+/* shared chip-mono-giant for frames */
+.fchip-mono{
+  background:var(--od-surface); color:var(--od-fg);
+  border:0.16cqw solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em;
+  padding:0.9cqw 1.8cqw; display:inline-block; white-space:nowrap;
+}
+.fchip-peach{
+  background:var(--od-accent); color:var(--od-fg);
+  border:0.16cqw solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em;
+  padding:0.9cqw 1.8cqw; display:inline-block; white-space:nowrap;
+}
+.fchip-butter{
+  background:var(--od-agent-voice); color:var(--od-fg);
+  border:0.16cqw solid var(--od-fg); border-radius:999px;
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em;
+  padding:0.9cqw 1.8cqw; display:inline-block; white-space:nowrap;
+}
+
+/* ---- Frame 2 — Oversized Claim ---- */
+.t2{ background:var(--od-bg); }
+.t2 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; align-items:center; justify-content:center; text-align:center; }
+.t2 .claim{
+  font-family:var(--font-display); font-size:9cqw; font-weight:500; line-height:0.96;
+  letter-spacing:-0.32cqw; color:var(--od-fg);
+  max-width:78cqw;
+}
+.t2 .claim .pill{
+  background:var(--od-agent-voice); color:var(--od-fg);
+  border-radius:999px; padding:0.4cqw 2.2cqw;
+  font-family:var(--font-serif); font-style:italic; font-size:9cqw; line-height:0.96;
+  display:inline-block; white-space:nowrap;
+  vertical-align:baseline;
+}
+
+/* ---- Frame 3 — Focal Artifact ---- */
+.t3{ background:var(--od-bg); }
+.t3 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2.4cqw; }
+.t3 .stage{
+  width:70cqw; height:64cqh;
+  background:var(--od-bg-deep);
+  border:0.22cqw solid var(--od-fg);
+  border-radius:32px;
+  box-shadow:0 0.6cqw 0 var(--od-fg);
+  padding:3cqw;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.t3 .artifact{
+  width:80%;
+  background:var(--od-surface);
+  border:0.2cqw solid var(--od-fg);
+  border-radius:32px;
+  padding:2.6cqw;
+  box-shadow:0 0.5cqw 0 var(--od-fg);
+  transform:rotate(-1deg);
+  display:flex; flex-direction:column; gap:1.4cqw;
+}
+.t3 .artifact .title{
+  font-family:var(--font-display); font-size:3.4cqw; font-weight:500;
+  line-height:1.05; color:var(--od-fg);
+}
+.t3 .artifact .body{
+  font-family:var(--font-display); font-size:1.45cqw; font-weight:400;
+  line-height:1.5; color:var(--od-muted);
+}
+.t3 .artifact .foot{
+  display:flex; justify-content:space-between; align-items:center; margin-top:1cqw;
+}
+.t3 .artifact .meta{
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em; color:var(--od-muted);
+}
+
+/* ---- Frame 4 — Agent Ledger (dense exception) ---- */
+.t4{ background:var(--od-bg-deep); }
+.t4 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; flex-direction:column; gap:2cqw; }
+.t4 .head{
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:0.5cqw;
+}
+.t4 .head .title{
+  font-family:var(--font-display); font-size:4.2cqw; font-weight:500; line-height:1; letter-spacing:-0.08cqw; color:var(--od-fg);
+  white-space:nowrap;
+}
+.t4 .grid{
+  flex:1;
+  display:grid; grid-template-columns:repeat(4, 1fr); grid-template-rows:repeat(3, 1fr);
+  gap:0.8cqw;
+}
+.t4 .cell{
+  background:var(--od-surface);
+  border:0.14cqw solid var(--od-fg);
+  border-radius:14px;
+  padding:1.1cqw 1.2cqw;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.t4 .cell .top{ display:flex; justify-content:space-between; align-items:center; }
+.t4 .cell .label{
+  font-family:var(--font-mono); font-size:1.0cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em; color:var(--od-muted);
+  white-space:nowrap;
+}
+.t4 .cell .num{
+  font-family:var(--font-display); font-size:3.6cqw; font-weight:500;
+  line-height:0.92; letter-spacing:-0.06cqw; color:var(--od-fg);
+}
+.t4 .dot{
+  display:inline-block; width:1.0cqw; height:1.0cqw;
+  border:0.14cqw solid var(--od-fg); border-radius:999px;
+}
+.t4 .dot.moss{ background:var(--od-agent-text); }
+.t4 .dot.butter{ background:var(--od-agent-voice); }
+.t4 .dot.sky{ background:var(--od-agent-video); }
+.t4 .dot.plum{ background:var(--od-agent-edit); }
+
+/* ---- Frame 5 — Ribbon Break ---- */
+.t5{ background:var(--od-bg); }
+.t5 .top{ position:absolute; left:0; right:0; top:0; height:24cqh; background:var(--od-bg); padding:5cqw 5cqw 0; display:flex; align-items:flex-start; }
+.t5 .ribbon{ position:absolute; left:0; right:0; top:24cqh; height:38cqh; background:var(--od-light-ribbon); display:flex; align-items:center; justify-content:center; padding:0 5cqw; }
+.t5 .ribbon .text{
+  font-family:var(--font-display); font-size:4.8cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.04em; color:var(--od-bg);
+  text-align:center; white-space:nowrap;
+}
+.t5 .bot{ position:absolute; left:0; right:0; top:62cqh; bottom:0; background:var(--od-bg-deep); padding:0 5cqw 5cqw; display:flex; align-items:flex-end; justify-content:flex-end; }
+.t5 .bot .mono{
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em; color:var(--od-fg);
+}
+
+/* ---- Frame 6 — Live Console ---- */
+.t6{ background:var(--od-bg); }
+.t6 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; align-items:center; justify-content:center; }
+.t6 .theater{
+  width:80cqw; height:72cqh;
+  background:var(--od-fg);
+  border:0.18cqw solid var(--od-line);
+  border-radius:32px;
+  padding:3cqw;
+  position:relative;
+  display:flex; flex-direction:column; gap:2cqw;
+}
+.t6 .theater .corner{
+  position:absolute; top:2cqw; right:2cqw;
+}
+.t6 .theater .title{
+  font-family:var(--font-display); font-size:3.4cqw; font-weight:500;
+  line-height:1; letter-spacing:-0.04cqw; color:var(--od-bg);
+}
+.t6 .theater .selected{
+  background:var(--od-agent-voice); color:var(--od-fg);
+  border-radius:999px;
+  height:8cqh;
+  display:flex; align-items:center; gap:1.4cqw;
+  padding:0 2.4cqw;
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em;
+  white-space:nowrap;
+}
+.t6 .theater .selected .dot{
+  display:inline-block; width:1.0cqw; height:1.0cqw;
+  background:var(--od-agent-voice);
+  border:0.14cqw solid var(--od-fg); border-radius:999px;
+}
+.t6 .theater .sublist{
+  display:flex; flex-direction:column; gap:1.2cqw;
+}
+.t6 .theater .sublist .row{
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em; color:var(--od-bg);
+  opacity:0.7;
+}
+.t6 .theater .corner .fchip-mono{
+  background:transparent; color:var(--od-bg);
+  border:0.16cqw solid var(--od-bg);
+}
+
+/* ---- Frame 7 — Stat Closer ---- */
+.t7{ background:var(--od-fg); }
+.t7 .stack{ position:absolute; inset:0; padding:5cqw; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5cqw; }
+.t7 .kicker{
+  font-family:var(--font-mono); font-size:1.4cqw; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.16em; color:var(--od-bg);
+}
+.t7 .num{
+  font-family:var(--font-display); font-size:22cqw; font-weight:500;
+  line-height:0.88; letter-spacing:-0.6cqw; color:var(--od-bg);
+}
+.t7 .italic{
+  font-family:var(--font-serif); font-style:italic; font-size:9cqw;
+  line-height:0.96; color:var(--od-agent-voice);
+}
+
+/* ============================================================
+   PRINCIPLES — branded Do/Don't cards
+   ============================================================ */
+.principles{
+  display:grid; grid-template-columns:1fr 1fr; gap:32px;
+}
+.principle{
+  background:var(--od-surface);
+  border:1.5px solid var(--od-fg); border-radius:24px;
+  padding:32px;
+  box-shadow:0 3px 0 var(--od-fg);
+}
+.principle.dont{ background:var(--od-bg-deep); }
+.principle .tag{
+  display:inline-block;
+  background:var(--od-fg); color:var(--od-bg);
+  border-radius:999px; padding:8px 18px;
+  font-family:var(--font-mono); font-size:11px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.2em;
+  margin-bottom:24px;
+}
+.principle.dont .tag{ background:var(--od-accent-strong); color:var(--od-fg); }
+.principle ul{
+  list-style:none;
+  display:flex; flex-direction:column; gap:14px;
+}
+.principle li{
+  font-family:var(--font-display);
+  font-size:17px; line-height:1.5; color:var(--od-fg);
+  padding-left:22px; position:relative;
+}
+.principle li::before{
+  content:""; position:absolute; left:0; top:11px;
+  width:10px; height:10px; border-radius:999px;
+  background:var(--od-fg);
+}
+.principle.dont li::before{ background:var(--od-accent-strong); }
+.principle li em{ font-family:var(--font-serif); font-style:italic; }
+
+/* ============================================================
+   FOOTER COLOPHON
+   ============================================================ */
+.colophon{
+  margin-top:128px; padding-top:48px;
+  border-top:1.5px solid var(--od-fg);
+  display:flex; justify-content:space-between; align-items:baseline; gap:32px;
+  font-family:var(--font-mono); font-size:11px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.2em;
+  color:var(--od-muted);
+}
+.colophon .mark{ font-family:var(--font-display); font-size:32px; font-weight:500; letter-spacing:-0.02em; text-transform:none; color:var(--od-fg); }
+.colophon .mark em{ font-family:var(--font-serif); font-style:italic; font-weight:400; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     COVER — full-bleed 16:9 identity frame, Treatment 1.
+     First element. No section label, no wrapper.
+     ============================================================ -->
+<section class="cover-frame">
+  <div class="cover-inner">
+    <div class="cover-chip">— Tagline —</div>
+    <div class="cover-wordmark">
+      <span class="word">Vibe</span>
+      <span class="pill">life</span>
+    </div>
+    <div class="cover-foot">
+      <span>FRAME.md · v1</span>
+      <span>16 : 9 · 1920 × 1080</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DOC CHROME begins below the cover.
+     ============================================================ -->
+<main class="doc">
+
+  <!-- ===== Palette ===== -->
+  <section class="doc-section">
+    <header class="section-head">
+      <span class="idx">01 · Palette</span>
+      <span class="title">Cream paper, ink, <em>one</em> accent.</span>
+      <span class="tag">grounds + rationed accent</span>
+    </header>
+    <p class="section-intro">
+      Tokens carry verbatim from <code>design.md</code>. At frame scale they behave as
+      full-bleed grounds with a single accent pill — never as small swatches scattered across a card.
+    </p>
+
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#f3ecd9"></div>
+        <div class="swatch-meta">
+          <span class="token">od-bg / cream</span>
+          <span class="hex">#f3ecd9</span>
+          <span class="role">Default frame ground.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#ece2c9"></div>
+        <div class="swatch-meta">
+          <span class="token">od-bg-deep</span>
+          <span class="hex">#ece2c9</span>
+          <span class="role">Embedded stage / quiet alt ground.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#faf6ec"></div>
+        <div class="swatch-meta">
+          <span class="token">od-surface / paper</span>
+          <span class="hex">#faf6ec</span>
+          <span class="role">Cards, pills, lifted surfaces.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#161513"></div>
+        <div class="swatch-meta">
+          <span class="token">od-fg / ink</span>
+          <span class="hex">#161513</span>
+          <span class="role">Outlines, shadow, inverse ground.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#f0a87a"></div>
+        <div class="swatch-meta">
+          <span class="token">od-accent / peach</span>
+          <span class="hex">#f0a87a</span>
+          <span class="role">Editorial voltage — highlight pill.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#f0c860"></div>
+        <div class="swatch-meta">
+          <span class="token">od-agent-voice / butter</span>
+          <span class="hex">#f0c860</span>
+          <span class="role">Selection, voice agent, active.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#5b7a4a"></div>
+        <div class="swatch-meta">
+          <span class="token">od-agent-text / moss</span>
+          <span class="hex">#5b7a4a</span>
+          <span class="role">Text agent, calm-ready.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#b8c8d8"></div>
+        <div class="swatch-meta">
+          <span class="token">od-agent-video / sky</span>
+          <span class="hex">#b8c8d8</span>
+          <span class="role">Avatar agent, cool counterweight.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#6b4a7a"></div>
+        <div class="swatch-meta">
+          <span class="token">od-agent-edit / plum</span>
+          <span class="hex">#6b4a7a</span>
+          <span class="role">HyperFrames edit, twilight review.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#e88c5a"></div>
+        <div class="swatch-meta">
+          <span class="token">od-accent-strong</span>
+          <span class="hex">#e88c5a</span>
+          <span class="role">Urgent editorial punctuation.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#2a2622"></div>
+        <div class="swatch-meta">
+          <span class="token">od-muted</span>
+          <span class="hex">#2a2622</span>
+          <span class="role">Secondary copy, dense labels.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#1b1a18"></div>
+        <div class="swatch-meta">
+          <span class="token">od-line</span>
+          <span class="hex">#1b1a18</span>
+          <span class="role">Heavy outline, dark-surface border.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Typography ===== -->
+  <section class="doc-section">
+    <header class="section-head">
+      <span class="idx">02 · Typography</span>
+      <span class="title">Two ramps, <em>one</em> italic word.</span>
+      <span class="tag">reading + display · floor 1.4cqw</span>
+    </header>
+    <p class="section-intro">
+      Space Grotesk for display and body, Instrument Serif italic for exactly one word per frame,
+      JetBrains Mono uppercase for state and metadata. Live specimens below render at
+      showcase-scale; the spec values are frame-relative (<code>cqw</code>).
+    </p>
+
+    <div class="type-stack">
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">wordmark-mega</span>
+          <span class="spec">Space Grotesk · 500<br>30cqw · lh 0.84<br>identity cover only</span>
+        </div>
+        <div class="type-spec-hero">Vibe</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">display-hero</span>
+          <span class="spec">Space Grotesk · 500<br>14cqw · lh 0.92<br>≤ 3-word claims</span>
+        </div>
+        <div class="type-spec-claim">Brand memory loaded.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">serif-accent-hero</span>
+          <span class="spec">Instrument Serif italic<br>14cqw · lh 0.92<br>one word per frame</span>
+        </div>
+        <div class="type-spec-serif">life</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">section-head</span>
+          <span class="spec">Space Grotesk · 500<br>4.2cqw · lh 1.0<br>ledger / catalog</span>
+        </div>
+        <div class="type-spec-section">Agent Ledger</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">body</span>
+          <span class="spec">Space Grotesk · 400<br>1.45cqw · lh 1.5<br>at the floor</span>
+        </div>
+        <div class="type-spec-body">A warm editorial studio with a friendly little operating system inside it — cream paper, ink outline, one accent pill at a time.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="name">mono-label-readable</span>
+          <span class="spec">JetBrains Mono · 500<br>1.4cqw · tracking 0.16em<br>load-bearing mono</span>
+        </div>
+        <div class="type-spec-mono">Ready · Drafting · Reviewing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Components ===== -->
+  <section class="doc-section comp-section">
+    <header class="section-head">
+      <span class="idx">03 · Components</span>
+      <span class="title">Atoms, <em>composed</em>.</span>
+      <span class="tag">frontmatter tokens · rendered</span>
+    </header>
+    <p class="section-intro">
+      Every <code>components</code> token in <code>FRAME.md</code> is a CSS class below.
+      Frame Treatments compose these — they never re-state construction.
+    </p>
+
+    <div class="cluster">
+      <span class="cluster-label">Pills · chrome · CTA</span>
+      <span class="c-pill-nav">Studio</span>
+      <span class="c-pill-nav-active">Brand Memory</span>
+      <span class="c-pill-nav">Agents</span>
+      <span class="c-pill-nav">Library</span>
+      <span class="c-pill-nav">Publish</span>
+      <span class="c-chip-mono">Draft-04</span>
+      <span class="c-chip-peach">Review pass</span>
+      <span class="c-chip-butter">Active</span>
+      <span class="c-chip-moss">Ready</span>
+      <span class="c-button-primary"><span class="bauble"></span>Ship package</span>
+    </div>
+
+    <div class="cluster" style="align-items:flex-start;">
+      <span class="cluster-label">Highlight pill · the italic word in a frame</span>
+      <span class="c-highlight-peach-pill">life</span>
+      <span class="c-highlight-butter-pill">brand</span>
+      <span class="comp-caption">— inline-baseline against display sans; one per frame —</span>
+    </div>
+
+    <div class="cluster" style="align-items:stretch;">
+      <span class="cluster-label">Cards · sticker shadow · ink outline</span>
+      <div class="c-card-paper">
+        <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.18em; color:var(--od-muted); margin-bottom:10px;">Draft Package</div>
+        <div style="font-family:var(--font-display); font-size:22px; font-weight:500; line-height:1.1;">— title —</div>
+        <div style="font-family:var(--font-display); font-size:15px; line-height:1.5; color:var(--od-muted); margin-top:8px;">Three-line draft summary, body voice, hand-placed.</div>
+      </div>
+      <div class="c-card-cream-deep">
+        <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.18em; color:var(--od-muted); margin-bottom:10px;">Brand Memory</div>
+        <div style="font-family:var(--font-display); font-size:22px; font-weight:500; line-height:1.1;">— context —</div>
+        <div style="font-family:var(--font-display); font-size:15px; line-height:1.5; color:var(--od-muted); margin-top:8px;">Embedded well: persistent voice, tone, prior posts.</div>
+      </div>
+    </div>
+
+    <div class="cluster">
+      <span class="cluster-label">Agent state · dot inside chip</span>
+      <span class="c-chip-mono"><span class="c-state-dot moss" style="margin-right:8px; vertical-align:middle;"></span>Text · Ready</span>
+      <span class="c-chip-mono"><span class="c-state-dot butter" style="margin-right:8px; vertical-align:middle;"></span>Voice · Drafting</span>
+      <span class="c-chip-mono"><span class="c-state-dot sky" style="margin-right:8px; vertical-align:middle;"></span>Avatar · Rendering</span>
+      <span class="c-chip-mono"><span class="c-state-dot plum" style="margin-right:8px; vertical-align:middle;"></span>Edit · Reviewing</span>
+    </div>
+  </section>
+
+  <!-- ===== Frame Treatments (the storyboard) ===== -->
+  <section class="doc-section">
+    <header class="section-head">
+      <span class="idx">04 · Frame Treatments</span>
+      <span class="title">Seven plates, <em>composed</em>.</span>
+      <span class="tag">16:9 · 1920 × 1080</span>
+    </header>
+    <p class="section-intro">
+      Each frame renders at a reviewable contact-sheet size with <code>container-type:size</code>
+      so internal <code>cqw</code> values resolve against the frame, not the viewport. Numerals,
+      titles, and copy are placeholders — never invented.
+    </p>
+
+    <div class="storyboard">
+
+      <!-- Plate 1 -->
+      <div class="plate">
+        <div class="frame t1">
+          <div class="frame-inner">
+            <div class="chip"><span class="fchip-mono">— Tagline —</span></div>
+            <div class="stack">
+              <div class="wm">
+                <span class="word">Vibe</span>
+                <span class="pill">life</span>
+              </div>
+            </div>
+            <div class="foot">
+              <span>FRAME.md · v1</span>
+              <span>16 : 9</span>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">1 · Identity <em>Cover</em></span>
+          <span class="meta"><span class="arch">identity</span><span class="density">density · sparse</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 2 -->
+      <div class="plate">
+        <div class="frame t2">
+          <div class="frame-inner">
+            <div class="stack">
+              <div class="claim">Make the <span class="pill">brand</span> memorable.</div>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">2 · Oversized <em>Claim</em></span>
+          <span class="meta"><span class="arch">editorial</span><span class="density">density · sparse</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 3 -->
+      <div class="plate">
+        <div class="frame t3">
+          <div class="frame-inner">
+            <div class="stack">
+              <span class="fchip-mono">— Draft Package · Ready —</span>
+              <div class="stage">
+                <div class="artifact">
+                  <div class="title">— Draft title —</div>
+                  <div class="body">— Three lines of body copy, body voice. Hand-placed on a cream stage with one peach action chip below. Sparse, intentional, breathes. —</div>
+                  <div class="foot">
+                    <span class="meta">Review pass · 02</span>
+                    <span class="fchip-peach">Open pass</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">3 · Focal <em>Artifact</em></span>
+          <span class="meta"><span class="arch">focal-artifact</span><span class="density">density · standard</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 4 — Agent Ledger -->
+      <div class="plate">
+        <div class="frame t4">
+          <div class="frame-inner">
+            <div class="stack">
+              <div class="head">
+                <span class="title">Agent ledger</span>
+                <span class="fchip-mono">— 14:02 —</span>
+              </div>
+              <div class="grid">
+                <div class="cell"><div class="top"><span class="label">Text</span><span class="dot moss"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Voice</span><span class="dot butter"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Avatar</span><span class="dot sky"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Edit</span><span class="dot plum"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Draft 04</span><span class="dot moss"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Take 02</span><span class="dot butter"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Scene 01</span><span class="dot sky"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Cut 03</span><span class="dot plum"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Memory</span><span class="dot moss"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Queue</span><span class="dot butter"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Preview</span><span class="dot sky"></span></div><span class="num">— · —</span></div>
+                <div class="cell"><div class="top"><span class="label">Handoff</span><span class="dot plum"></span></div><span class="num">— · —</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">4 · Agent <em>Ledger</em></span>
+          <span class="meta"><span class="arch">data / ledger</span><span class="density">density · dense-exception</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 5 — Ribbon Break -->
+      <div class="plate">
+        <div class="frame t5">
+          <div class="frame-inner">
+            <div class="top"><span class="fchip-mono">— Brand Memory —</span></div>
+            <div class="ribbon"><div class="text">— Ribbon Phrase · Studio · Brand Memory · Agents —</div></div>
+            <div class="bot"><span class="mono">Publish queue · 03</span></div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">5 · Ribbon <em>Break</em></span>
+          <span class="meta"><span class="arch">chrome / catalog</span><span class="density">density · sparse</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 6 — Live Console -->
+      <div class="plate">
+        <div class="frame t6">
+          <div class="frame-inner">
+            <div class="stack">
+              <div class="theater">
+                <div class="corner"><span class="fchip-mono">— Live —</span></div>
+                <div class="title">Voice take · pass 02</div>
+                <div class="selected"><span class="dot"></span><span>— Selected · Butter row —</span></div>
+                <div class="sublist">
+                  <div class="row">— Variant · Calm —</div>
+                  <div class="row">— Variant · Bright —</div>
+                  <div class="row">— Variant · Quiet —</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">6 · Live <em>Console</em></span>
+          <span class="meta"><span class="arch">brand-signature</span><span class="density">density · standard</span></span>
+        </div>
+      </div>
+
+      <!-- Plate 7 — Stat Closer -->
+      <div class="plate">
+        <div class="frame t7">
+          <div class="frame-inner">
+            <div class="stack">
+              <div class="kicker">— Brand memory · posts —</div>
+              <div class="num">— figure —</div>
+              <div class="italic">loaded</div>
+            </div>
+          </div>
+        </div>
+        <div class="label-rail">
+          <span class="name">7 · Stat <em>Closer</em></span>
+          <span class="meta"><span class="arch">closer</span><span class="density">density · sparse</span></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Principles ===== -->
+  <section class="doc-section">
+    <header class="section-head">
+      <span class="idx">05 · Principles</span>
+      <span class="title">Squint, silence, <em>restraint</em>.</span>
+      <span class="tag">do / don't · at frame scale</span>
+    </header>
+
+    <div class="principles">
+      <div class="principle do">
+        <span class="tag">Do</span>
+        <ul>
+          <li>Center the wordmark, the claim, the focal artifact, the closer.</li>
+          <li>Fire <em>one</em> italic serif word per frame, inside one accent pill.</li>
+          <li>Keep the ink line and the flat hard shadow on every lifted surface.</li>
+          <li>Let cream paper breathe — sparse frames read 55–75% empty.</li>
+          <li>Vary the anchor; use the ledger or the ribbon to break a run.</li>
+          <li>Express gravity through ink outline + flat shadow.</li>
+        </ul>
+      </div>
+      <div class="principle dont">
+        <span class="tag">Don't</span>
+        <ul>
+          <li>Don't italicize the display sans — italic comes from <em>Instrument</em> Serif.</li>
+          <li>Don't fire two accent pills at full strength on the same frame.</li>
+          <li>Don't park a kicker chip in the top-left of every frame.</li>
+          <li>Don't render a treatment as nav + hero + features — the frame is a plate.</li>
+          <li>Don't use soft blur on chrome. Blur is for dimensional artifacts only.</li>
+          <li>Don't fabricate metrics — hold numerals as <em>— figure —</em> until the script.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span class="mark">Vibe <em>life</em></span>
+    <span>FRAME.md · v1 · 16:9 primary</span>
+    <span>cream · ink · one accent</span>
+  </footer>
+
+</main>
+
+</body>
+</html>

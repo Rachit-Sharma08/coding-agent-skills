@@ -1,0 +1,18 @@
+# Watch folders
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Improving performance proxies and the render cache.
+[Chapter index](INDEX.md) / [Previous section](camera-original-indicators-and-proxy-generation.md) / [Next section](proxy-generator-format-and-processing.md)
+<a id="source-improving-performance-proxies-and-the-render-cache-part-3"></a> <a id="source-using-watch-folders"></a>
+
+### Using Watch Folders
+
+
+A watch folder is just a particular folder on your OS that the Blackmagic Proxy Generator keeps an eye on at all times. As soon as fresh files land in the watch folder, the Blackmagic Proxy Generator gets alerted and, with no further human involvement required, transcodes those files into proxy media on its own. There's no cap on how many watch folders you set up; all that's asked is that the storage the watch folder lives on carry enough room for both the original media files and the freshly made proxy media. IMPORTANT: The proxy media lands in a subfolder called “Proxy” sitting at the same tier of the file hierarchy as the original media file. So when all your original media shares a single folder, you'll end up with one “Proxy” folder housing every proxy clip. When your original media is split across separate folders (i.e., a folder per video clip), you'll wind up with several “Proxy” folders, each tucked inside its clip folder and holding a lone proxy clip. NOTE: A watch folder cannot be named “proxy.” The Proxy Generator has claimed that name. To Add a New Watch Folder At least one watch folder is required, and you may set up as many as you need. You might, for instance, keep distinct watch folders per card, per scene, per date, or by whatever scheme best fits how you work. 1 Click the Add button. 2 Either make a fresh folder or point to one that already exists within the file system window. 3 Press the open button. Your new watch folder then surfaces in the Watch Folders pane of the Blackmagic Proxy Generator, showing its location alongside its current status.
+
+To Remove an Existing Watch Folder Once you're done with a particular watch folder, you can drop it from the Blackmagic Proxy Generator's watch list. Dropping a folder neither erases it nor its files from your drive; all it does is halt the Blackmagic Proxy Generator's monitoring of it. 1 Highlight the watch folder within the Watch Folders list. 2 Click the Remove button. Pulled the wrong watch folder by mistake? Just re-add it through the steps laid out above. Monitoring Watch Folders The state of every watch folder is visible within the Watch Folders section of the Blackmagic Proxy Generator. You can reorder how they appear by hand, dragging an entry higher or lower in the list. Below sits the estimated disk space the proxies will need, and three columns carry details on each folder.
+
+- Volume: The logical volume (disk, network storage, usb drive, etc.) where the watch folder resides. This tells you which physical device has to be hooked up to the computer before the Blackmagic Proxy Generator will work.
+- Folder: The name of the Watch Folder. Rather than its path, it displays only the watch folder's own name.
+- Status: This column reports the present state of the watch folder's files. Waiting: This folder holds clips not yet transcoded into proxies. It's awaiting the Blackmagic Proxy Generator's launch or the completion of a folder queued ahead of it. Processing (x/x): This folder holds clips undergoing transcoding right now. Left of the slash is the current clip number; right of the slash is the total clip count slated for transcoding. Completed: This folder has wrapped up transcoding every proxy file for the media it contains.
+
+The Watch Folders section of the Blackmagic Proxy Generator

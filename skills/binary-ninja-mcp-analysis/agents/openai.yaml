@@ -1,0 +1,9 @@
+interface:
+  display_name: Binary Ninja MCP Analysis
+  short_description: "Analyze binaries with Binary Ninja IL and MCP tools."
+  icon_small: ./assets/icon.svg
+  icon_large: ./assets/icon.png
+  brand_color: '#00B36B'
+  default_prompt: Use $binary-ninja-mcp-analysis for this workflow.
+policy:
+  allow_implicit_invocation: true

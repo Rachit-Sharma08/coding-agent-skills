@@ -1,0 +1,31 @@
+# Positioning the tracker onscreen control
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Using the tracker node.
+[Chapter index](INDEX.md) / [Previous section](match-moving-text-example-and-adding-a-layer-to-match-move.md) / [Next section](motion-track-match-move-and-position-offset.md)
+<a id="source-positioning-the-tracker-onscreen-control"></a> <a id="source-using-the-tracker-node-part-3"></a>
+
+### Positioning the Tracker Onscreen Control
+
+
+Once you select the Tracker node, a lone green box turns up in the viewer; that box is the default onscreen control belonging to the first default tracker the node holds (you can spot it within the Tracker List of the Inspector controls). Remember that onscreen controls only show for nodes you’ve selected, so whenever those onscreen tracker controls are nowhere to be seen, that tells you the tracker you mean to work on still needs selecting. Pulling the tracker you intend to work on into the viewer is likewise the surest route to confirming you’re placing the controls correctly against the actual picture you’re tracking. Hover your pointer over this box and the whole onscreen control for that tracker shows up, and clicking that onscreen control to select the tracker turns it red. Like so many of the other tracker interfaces you’ve probably run into, it’s made up of two boxes carrying assorted handles for shifting and resizing them:
+
+- The inner box is the “pattern box,” which pins down the “pattern” within the picture you mean to track and want to chase the motion of. A tiny handle sits at the pattern box’s upper-left corner, and you grab it to drag the box over whatever you intend to track. You can also resize that box by dragging any corner, or squash or stretch it by dragging any edge so the box fits the size of the pattern you’re after more closely. Where the tracker’s center sits is reported through X and Y coordinates.
+- The outer box is the “search box,” which pins down how much of the picture the tracker has to study in order to chase the pattern’s motion. With a slow-moving picture, the default search box size is likely fine. Yet with a fast-moving picture, you might need to resize the search box (using the same sort of corner and side handles) so it scans a wider area, though that costs you a longer analysis. That tracker’s name shows down at the lower right of the search box.
+
+The onscreen controls of a selected tracker seen in isolation
+
+It bears repeating that the handle for shifting a tracker’s onscreen control is a tiny dot perched at the upper-left corner of the inner pattern box. Newcomers to Fusion find it really easy to overlook. You have to click that dot to drag the tracker about.
+
+The handle for dragging the tracker boxes to move them around For this example, we’ll drag the onscreen control until the pattern box sits over a stretch of the bridge directly above the leftmost support. While we drag the onscreen control, a zoomed-in view of the area we’re dragging across appears to help us seat the tracker with more accuracy. Here, the default sizes of the pattern and search box work just fine as they stand.
+
+A magnified preview that aids in seating the pattern box while you drag it along Using the Tracker’s Inspector Controls to Perform the Analysis Now let’s turn to the Tracker node’s controls over in the Inspector. The controls are plentiful, but for this straightforward example we only care about the main Tracker panel, holding the tracking analysis buttons up top, the tracking options beneath those, and the Tracker List under them. The Tracker List also carries buttons for adding and removing trackers; you may add multiple trackers that can all be analyzed together for various workflows, though we have no need of that right now.
+
+Tracker Inspector controls, where the tracking analysis buttons sit up top, the tracker options run through the middle, and below them rests the Tracker List Further controls covering each tracker and the image channels under analysis turn up at the bottom, alongside offset controls for each tracker, though we don’t need those just yet (at least not for now). Again, this track is straightforward enough that we hardly need to alter the default behaviors at all, but because the drone keeps flying along a circular path, the form of the pattern area keeps shifting while the clip plays. Luckily, we can pick Every Frame out of the Adaptive Mode menu to tell the tracker to refresh the pattern being matched at every frame of the analysis, which accounts for this.
+
+Switching the Adaptive Mode on the Tracker node over to Every Frame so the camera’s changing vantage point gets handled Now all that’s left is to reach for the tracker analysis buttons up top to launch the analysis. These buttons behave much like transport controls, letting you start and halt analysis whenever you need to handle problem tracks in different ways. Bear in mind that the bookend buttons, namely Track from Last Frame plus Track from First Frame, always kick off a track at whichever end the composition has, its last or first frame, regardless of where the playhead happens to rest, so make certain your tracker onscreen controls are seated properly on that last or first frame. Reading from left to right, the analysis buttons run: Track from Last Frame, then Track Backward, then the central Stop Tracking, followed by Track Forward, and finally Track from First Frame
+
+For now, hitting the Track from Beginning button will study this clip across its whole range, running from the first frame through to the last. A dialog tells you once the analysis finishes, and hitting the OK button clears it away so you can take in the nice clean motion path that comes of it.
+
+The motion path produced by analyzing a stretch of the bridge while the camera sweeps by Viewing Motion Track Data in the Spline Editor This isn’t a required part of the tracking workflow, but should you have an otherwise nice track carrying a few bumps, you can review the motion tracking data within the Spline Editor by viewing that tracker’s Displacement parameter curve. That curve can be edited, so you’re free to massage your tracking data in all sorts of ways if you need to.
+
+Viewing motion tracking analysis data in the Spline Editor

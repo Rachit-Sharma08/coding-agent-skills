@@ -1,0 +1,19 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Color page effects", "file": "references/resolve-fx/color-page-effects/INDEX.md", "summary": "Open when working with Color page effects controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Blur and FX overview", "file": "references/resolve-fx/blur-and-fx-overview/INDEX.md", "summary": "Open when working with Blur and FX overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX color", "file": "references/resolve-fx/resolve-fx-color/INDEX.md", "summary": "Open when working with Resolve FX color controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX film emulation", "file": "references/resolve-fx/resolve-fx-film-emulation/INDEX.md", "summary": "Open when working with Resolve FX film emulation controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX generate", "file": "references/resolve-fx/resolve-fx-generate/INDEX.md", "summary": "Open when working with Resolve FX generate controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX key", "file": "references/resolve-fx/resolve-fx-key/INDEX.md", "summary": "Open when working with Resolve FX key controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX light", "file": "references/resolve-fx/resolve-fx-light/INDEX.md", "summary": "Open when working with Resolve FX light controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX opencolorio", "file": "references/resolve-fx/resolve-fx-opencolorio/INDEX.md", "summary": "Open when working with Resolve FX opencolorio controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX refine", "file": "references/resolve-fx/resolve-fx-refine/INDEX.md", "summary": "Open when working with Resolve FX refine controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX revival", "file": "references/resolve-fx/resolve-fx-revival/INDEX.md", "summary": "Open when working with Resolve FX revival controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX sharpen", "file": "references/resolve-fx/resolve-fx-sharpen/INDEX.md", "summary": "Open when working with Resolve FX sharpen controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX stylize", "file": "references/resolve-fx/resolve-fx-stylize/INDEX.md", "summary": "Open when working with Resolve FX stylize controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX temporal", "file": "references/resolve-fx/resolve-fx-temporal/INDEX.md", "summary": "Open when working with Resolve FX temporal controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX texture", "file": "references/resolve-fx/resolve-fx-texture/INDEX.md", "summary": "Open when working with Resolve FX texture controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX transform", "file": "references/resolve-fx/resolve-fx-transform/INDEX.md", "summary": "Open when working with Resolve FX transform controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Resolve FX warp", "file": "references/resolve-fx/resolve-fx-warp/INDEX.md", "summary": "Open when working with Resolve FX warp controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

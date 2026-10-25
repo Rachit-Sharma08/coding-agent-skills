@@ -1,0 +1,11 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Effects overview", "file": "references/timeline-effects/effects-overview/INDEX.md", "summary": "Open when working with Effects overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Using transitions", "file": "references/timeline-effects/using-transitions/INDEX.md", "summary": "Open when working with Using transitions controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Titles generators and stills", "file": "references/timeline-effects/titles-generators-and-stills/INDEX.md", "summary": "Open when working with Titles generators and stills controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Compositing and transforms in the timeline", "file": "references/timeline-effects/compositing-and-transforms-in-the-timeline/INDEX.md", "summary": "Open when working with Compositing and transforms in the timeline controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Speed effects", "file": "references/timeline-effects/speed-effects/INDEX.md", "summary": "Open when working with Speed effects controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Subtitles and closed captioning", "file": "references/timeline-effects/subtitles-and-closed-captioning/INDEX.md", "summary": "Open when working with Subtitles and closed captioning controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Keyframing effects", "file": "references/timeline-effects/keyframing-effects/INDEX.md", "summary": "Open when working with Keyframing effects controls, procedures, or conditions.", "keywords": []},
+  {"topic": "VFX connect", "file": "references/timeline-effects/vfx-connect/INDEX.md", "summary": "Open when working with VFX connect controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}

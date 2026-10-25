@@ -1,0 +1,35 @@
+# Toolbar and timeline view options
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Using the Fairlight page.
+[Chapter index](INDEX.md) / [Previous section](track-header-and-zooming-audio-waveform-height.md) / [Next section](scroller.md)
+<a id="source-navigation-options"></a> <a id="source-selecting-the-audio-timeline-view-options"></a> <a id="source-timeline-scrolling"></a> <a id="source-timeline-view-options"></a> <a id="source-toolbar"></a> <a id="source-track-display-options"></a>
+
+### Toolbar
+
+Some buttons on the Toolbar let you pick functional modes, while others fire off commands such as dropping markers and flags.
+
+The toolbar icons on the Fairlight Page as they look while the transport bar shows the Automation button lit Timeline View Options dropdown menu: Holds an assortment of controls for tailoring how clips appear and for setting the Timeline's navigation and scrolling behavior. Grid View Options dropdown menu: Holds controls for tailoring the timeline grid, letting you show reference lines or snap clips to timecode or musical beat positions.
+
+Pointer Mode: The standard mode, where you reposition and resize clips in the Timeline, roll edits, and handle other routine editing. Though it works with the pointer, it's built to let you auto-select clips at the playhead's spot on chosen tracks via keyboard shortcuts or the Fairlight Editing console. Range Mode: An editing mode for selecting partial stretches of one or more clips so you can edit just those portions. It's built to let you auto-select using In and Out points that mark regions on chosen tracks, by way of keyboard shortcuts or the Fairlight Editing console. Focus Mode: Within Focus mode you reach Multi Tool behavior that shifts with cursor placement: The Selection tool (I-beam): Shows up as you hover the cursor over the top portion of the waveform track “lane,” letting you select time ranges of clips or automation keyframe data (which depends on the track view). The Hand tool: Shows up as you hover the cursor over the bottom portion of the waveform lane, letting you click to pick a clip or clips, drag to move them, or run Cut, Copy, and Paste. This tool is on hand in the other modes too. The Trim tool (Up/Down arrows): Shows up as you bring the cursor near the clip gain line, letting you trim the automaton curve for clip gain or keyframe levels. While you trim an automation parameter, a tooltip reports the level plus the delta from its original value. Trim tool cursors for adjusting clip boundaries — to trim a clip's head or tail, or to do rolling trims — are likewise available. This tool is on hand in the other modes too. Pencil: A tool for drawing automation data with the pointer acting as a pencil. The Pencil tool turns up once automation is on. Razor (Scissors): Click to drop a cut into every clip on an unlocked track that crosses the playhead's spot. Snapping: Turns clip snapping on or off. While on, clip In and Out points, markers, and the playhead all snap together for reference as you edit. Linked Selection: With this enabled, choosing an edit point that has both video and audio parts selects both edit points, so applying a video transition to an edit also lays a crossfade onto the audio. It also lets you tie together otherwise unrelated audio clips so edit operations (trimming, for one) hit every linked clip together. Automation Follows Edit: Turns on or off the per-timeline mix automation being baked into clips, so that copying and pasting fresh instances of them in the Timeline keeps their levels, panning, filter settings, and so on. That's a real help when the same audio clips appear repeatedly across an edit. The Automation Follow Edit button shows up once automation is on, and it's on by default.
+
+Flag Clip/Flag Colors dropdown menu: Flags mark clips and point out every clip that traces back to the same piece of media in the Media Pool. A clip can carry more than one flag. Pressing the Flag button drops a flag onto whatever clip is currently picked in the Timeline. Its dropdown menu lets you set the flag color and offers a way to clear every flag from the selected clip (when one is picked) or from the whole timeline (when none is). Add Marker/Marker Colors dropdown menu: Markers pinpoint particular frames within individual clips or timelines. With a clip picked in the timeline, pressing the Add Marker button drops a marker onto that clip at the playhead's spot in the Timeline. With no clips picked, pressing Add Marker drops a marker onto the timeline ruler at the playhead. Its dropdown menu lets you set marker color and offers a way to clear every marker from the selected clip (when one is picked) or from the whole timeline (when none is). Transient Detection: Switches on transient detection for all of a track's clips. Once on, a transient button shows up on tracks so the transients across that track's clips can be spotted and stepped through easily. With the Jump to Transient button on, the Up and Down arrow keys move between transients inside a clip. Vertical Slider: Lets you set the vertical zoom level of the tracks.
+
+Horizontal Slider: Lets you set the horizontal zoom level of the Timeline.
+
+### Timeline View Options
+
+### Selecting the Audio Timeline View options
+
+### Track Display Options
+
+Video Tracks: This button shows or hides the video tracks in the current Timeline so you can keep them on hand for reference as you work. Full Waveforms: This button switches full waveforms on and off, optionally dropping the divider bar that separates the waveform from each audio clip's file-name area, so the waveform spreads across the full height of each audio bar in the Timeline. Waveform Borders: This button switches waveform outlines on and off, painting a dark edge around each waveform to make them stand out. Gain Line: This button switches the clip gain indicator line on and off. It's also reachable under the Fairlight Menu > Show Clip Gain Line.
+
+### Navigation Options
+
+Jump to Clip: When on, this steps you from one clip to the next with the Up or Down Arrow keys. Jump to Fade: When on, this steps you from one fade to the next with the Up or Down Arrow keys. Jump to Marker: When on, this steps you from one marker to the next with the Up or Down Arrow keys. Jump to Transient: When on, this steps you from one transient to the next with the Up or Down Arrow keys. For this to work, Transient Detection has to be switched on for both the Timeline and the track.
+
+### Timeline Scrolling
+
+Fixed Playhead: This button pins the playhead in place so that, during playback, the tracks slide past it while it stays put — handy when you're at the Fairlight control surface. Page Scrolling: This button has the playhead run to the end of the current Timeline view, then begin a fresh page once the Timeline reaches its end. How quickly the page flips depends on the Timeline's zoom level. No Scrolling: This button locks the Timeline so it won't follow the playhead at all. Depending on zoom, the playhead may end up playing off-screen with no timeline update
+
+NOTE: You'll also find these options in the View menu > Timeline Scrolling.

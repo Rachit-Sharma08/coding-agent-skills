@@ -1,0 +1,78 @@
+# Syncing audio to video and auto sync audio
+
+Version: DaVinci Resolve 20.3 Reference Manual. Context: Syncing audio and video.
+[Chapter index](INDEX.md)
+<a id="source-auto-sync-audio"></a> <a id="source-auto-sync-audio-to-video-by-inout-points-and-markers"></a> <a id="source-auto-sync-audio-to-video-by-matching-waveforms"></a> <a id="source-auto-sync-audio-to-video-using-timecode"></a> <a id="source-clicking-the-sync-link-button-to-lock-sync"></a> <a id="source-detach-synced-audio-from-video"></a> <a id="source-displaying-synced-audio-file-names-on-the-timeline"></a> <a id="source-finding-synced-audio-files"></a> <a id="source-manually-syncing-audio-to-video"></a> <a id="source-offsetting-the-sync-of-previously-synced-clips"></a> <a id="source-progress-dialog-for-syncing-dialog-using-waveforms"></a> <a id="source-retaining-video-metadata-and-embedded-audio-when-syncing-audio-manually"></a> <a id="source-syncing-audio-and-video"></a> <a id="source-syncing-audio-and-video-1"></a> <a id="source-syncing-audio-to-video"></a> <a id="source-the-auto-sync-dialog"></a>
+
+### Syncing Audio and Video
+
+On a program where the production audio was captured apart from the production video — a practice commonly called “dual-system recording — DaVinci Resolve supplies tools that line the audio and video back up in several different ways, yielding media that’s easy to cut. People often call the act of pairing audio and video back up “syncing dailies.”
+
+### Syncing Audio to Video
+
+When you’re cutting a shoot that relied on dual-system recording, with audio captured on a device separate from the video, DaVinci Resolve lets you line up and combine the production audio files with the video clips, by hand or on its own.
+
+### Auto Sync Audio
+
+Lining up hundreds of individual audio and video files by hand may build character, but it’s rarely the best use of your hours. An Auto Sync Audio feature in DaVinci Resolve can take that tedious chore off your plate and handle it for you through several different methods. That said, every one of those methods calls for a bit of groundwork up front.
+
+### The Auto Sync Dialog
+
+Before you can Auto Sync, your audio and video files have to be sorted. One way is to drop every audio and video clip you mean to sync into one shared bin; another is to keep video and audio in separate bins and command-click to multi-select across them. You’ll get the cleanest results by keeping only the video and audio clips that actually need syncing (dialog, live music, and so on) apart from the media files that don’t (b-roll, room tone, MOS shots, and the like).
+
+### Auto Sync Audio to Video Using Timecode
+
+In the best case, when the sound recordist on set kept things tidy and both the camera and audio recorder ran on synchronized timecode, a lone command can pair up each timeline clip with a bin full of Broadcast .wav files whose timecode matches. Here is the batch sync of audio to video by timecode: 1 On whichever bin(s) hold the paired audio and video clips, right-click and then choose Auto Sync Audio from the contextual menu. 2 Within the Synchronize Using selector, pick Timecode. 3 If you like, the original audio files and video metadata can be kept. Retain embedded audio: Puts extra channels alongside the audio channels the media file already had. Those freshly waveform-synced channels go onto another track, so once cut into the timeline a clip synced this way shows up as one video clip plus two audio clips sitting on two separate audio tracks, letting you cut the camera original audio apart from the synced audio. Each clip in the chosen bin that had a companion Broadcast .wav file at the same timecode gets synced to an audio track right away. Should several audio files line up at matching time code, every one of them is synced and a new audio track is tacked onto the resulting clip to hold each audio file. To make only the closest single match sync while the others are ignored, tick the box labeled “Limit media pool audio sync to first timecode match”; you’ll find it sitting within the Editing panel of the User section in the DaVinci Resolve Preferences dialog. As for Retain Video Metadata: it’s off by default; a video file synced to an audio file therefore takes on metadata (scene and take, say) from that audio file. With the option ticked, the video file holds onto its own metadata instead of having it overwritten. 4 Press Sync. Every synced clip shows an audio icon at its lower left in the Media Pool while Thumbnail view is active. With the clips synced, you can cut them on the Edit page or head to the Deliver page to put out offline dailies or online media that carries embedded sync audio for other applications to use.
+
+### Auto Sync Audio to Video by Matching Waveforms
+
+If the audio and video source clips you’re syncing lack matching timecode, but you were smart enough to record camera audio at the same moment as the dual source production audio you’re syncing to, DaVinci Resolve can lean on waveform syncing to weigh the audio waveforms of your audio and video source files against each other and sync whichever ones line up. 1 Sort the media you intend to sync. On multi-day shoots, for example, it pays to arrange the audio and video files so a single day’s clips can all be selected together, which lets you sync in smaller batches. Grouping clips by scene can speed waveform syncing too, by cutting down how many files get compared at once. 2 On whichever bin(s) hold the paired audio and video clips, right-click and then choose Auto Sync Audio from the contextual menu. 3 Within the Synchronize Using selector, pick Waveform. Doing so studies and weighs the waveforms across the selected clips and swaps each video clip’s former audio channels for the freshly synced .wav files. 4 Pick from the options below. Use channel number: Lets you decide which audio track the waveform analysis runs on. Under “Auto,” DaVinci Resolve chooses on its own the channels best suited to waveform comparison. Under “Mix,” DaVinci Resolve weighs waveforms taken from the mixdown audio of every available channel. That can help where audio is missing across long stretches of one or channels. Users may also name individual channels to steer clear of noisy audio. Retain embedded audio: Studies and weighs the waveforms across the selected clips, then puts extra channels alongside the audio channels the media file already had. Those freshly waveform-synced channels go onto another track, so once cut into the Timeline a clip synced this way shows up as one video clip plus two audio clips sitting on two separate audio tracks, letting you cut the camera original audio apart from the synced audio. Retain Video Metadata: This is off by default, meaning a video file synced to an audio file picks up metadata (scene and take, for instance) from that audio file. Tick the option and the video file’s own metadata stays put rather than being overwritten. 5 Press Sync. A progress bar dialog comes up telling you how long the syncing will run. Once it finishes, your clips are synced.
+
+### Progress dialog for syncing dialog using waveforms
+
+TIP: Once syncing is done, a dialog may let you know that one or more clips couldn’t be synced. Make a note of them, since waveform syncing may work out better when you run it on just the single pair of audio and video items that go together.
+
+### Auto Sync Audio to Video by In/Out Points and Markers
+
+When the audio and video source clips you’re syncing share no matching timecode, and there’s no camera audio to sync by waveform either, syncing by In/Out Points and by Markers is another route. It remains largely a manual job and depends on someone having already marked each audio and video clip at a spot they know is in sync before this function gets used. It also handles just one audio/video pair each time. Here is the batch sync of dailies via In/Out Points or Markers: 1 Drop the audio and video clip you want to sync into a single shared bin. 2 Pick out a sync point on the video clip — say, the instant two hands meet in a clap. 3 Drop an In Point, Out Point, or Marker right there. 4 Pick out a sync point on the audio clip — say, the waveform spike where that hand clap is heard. 5 Drop an In Point, Out Point, or Marker right there. 6 Highlight both the matching audio and video clips inside the bin, right-click one, and choose Audio Sync > Auto Sync Audio from the contextual menu. 7 Within the Synchronize Using selector, pick In, Out, or Marker — whichever you used to mark both clips. The same kind of point has to be marked on both clips. 8 Pick from the options below. Retain embedded audio: Studies and weighs the waveforms across the selected clips, then puts extra channels alongside the audio channels the media file already had. Those freshly waveform-synced channels go onto another track, so once cut into the Timeline a clip synced this way shows up as one video clip plus two audio clips sitting on two separate audio tracks, letting you cut the camera original audio apart from the synced audio. Retain Video Metadata: This is off by default, meaning a video file synced to an audio file picks up metadata (scene and take, for instance) from that audio file. Tick the option and the video file’s own metadata stays put rather than being overwritten. 9 Press Sync.
+
+### Manually Syncing Audio to Video
+
+When you’ve got a batch of WAV or AIFF audio files paired with video source media that has no matching timecode, you’ll have to sync each pair of media files yourself, one at a time, leaning on a sync reference like a clapperboard’s clap or any other crisp sound with a clear audio/visual match. To manually sync audio to video: 1 Start a new project and bring the video media you need to sync into the Media Pool. Should a dialog ask whether you’d like to update the project to match the media, click OK. 2 To stay tidy, make a second bin in the Media Pool called Audio Clips and import the matching Broadcast .wav files there. What the bin is named doesn’t matter; keeping all the audio in one bin is purely for convenience. 3 Click the Waveform button atop the Audio Panel, which lets you see and scrub along the waveform of whatever audio clips you pick in the Media Pool. 4 Choose a video clip to sync and slide the Viewer playhead to meet the first visual sync point in that first clip. That cue could be a clapperboard’s clap, a hand clap, the red flash thrown by a tablet computer’s slate app, or any clear visual marker that has a sound to match. 5 Next, pick whichever audio clip goes with the current video clip in the Viewer to bring its waveform up in the Audio Panel. 6 Work the Audio Panel transport controls and the scrubber bar in the Source Viewer to bring the playhead to the audio sync point matching that video sync point. It could be a clap, a beep, or another staccato sound that’s simple to sync to. While you play the clip, the Viewer’s lower half shows a zoomed-out waveform of the whole clip and its upper half shows a zoomed-in slice of the waveform right around the playhead. With luck the sync point you want is a clear, loud spike near the start or, on a tail slate, the end of the audio clip.
+
+Lining up video and audio sync points while the Audio Panel is showing the Waveform panel 7 After you’ve pinned down the audio sync point matching the video sync point, click the Link/Unlink Audio button at the lower right of the Audio Panel to bake the now-synced audio into the video clip.
+
+### Clicking the sync link button to lock sync
+
+The audio and video items are now linked. From here you can put the freshly synced clips to use on the Edit page and use the Deliver page to put out offline or online media carrying embedded audio for editing.
+
+### Retaining Video Metadata and Embedded Audio when Syncing Audio Manually
+
+While syncing audio to video by hand on the Media page, you get to decide whether the original camera audio tracks come along in the synced file, and whether the camera scene/take metadata stays rather than letting the audio file’s scene take metadata overwrite it as it normally would. Under the Media page > Audio > Waveform tab, the option (3 dot) menu now puts 2 choices in front of you:
+
+Via the Audio > Waveform tab (3 dot) option menu, you decide whether to retain embedded audio and/or video metadata. Retain embedded audio With this on, embedded camera audio tracks come along with any audio you freshly sync over the course of manual linking (through the link icon on this pane). Retain video metadata Off by default; a video file synced to an audio file therefore takes on metadata (scene and take, say) from that audio file. With the option ticked, the video file holds onto its own metadata instead of having it overwritten.
+
+### Offsetting the Sync of Previously Synced Clips
+
+Should you later need to offset the audio (or stereo 3D) sync of the parts making up a clip, just select the synced clip you want to resync in the Media Pool, click the Waveform button atop the Audio panel to reveal the clip’s audio waveform, switch off the linked clip button, shift either the audio or video sync points, and switch the linked clip button on once more. Two sets of commands are also available for slipping any clip’s sync:
+
+- Trim > Slip Audio > Slip Audio One Frame Forward/Reverse: Nudges any clip’s audio/video sync by one whole frame at a step, with the shortcuts being Option-Period and OptionComma.
+- Trim > Slip Audio > Slip Audio One Subframe Forward/Reverse: Nudges any clip’s audio/video sync in 1/10th frame increments, with the shortcuts being Option-Right Arrow and Option‑Left Arrow.
+- Trim > Slip Eye > Slip Eye One Frame Forward/Reverse: Nudges how the two eyes in a stereo clip line up, one whole frame at a step, with the shortcuts being Command-Option-Period and Command-Option-Comma.
+
+### Finding Synced Audio Files
+
+After you’ve paired dual-system audio with video clips inside DaVinci Resolve, this is the way to locate which audio clip a particular video clip got synced to. Here is how to locate the audio that a video clip is synced to:
+
+- Switch the Media Pool to List view and read the file name shown in the Synced Audio column.
+- On a video clip that’s synced to audio, right-click; from the contextual menu, the command you want is Audio Sync > Reveal synced audio in Media Pool. Up opens the bin housing the synced audio clip, with that clip already selected.
+
+### Displaying Synced Audio File Names on the Timeline
+
+In some workflows you might prefer the timeline tracks to show the name of the original audio file in a synced dual system audio pair in place of the name of the video clip it rides on. Here is how to put the original audio file’s filename from a synced pair on the timeline: 1 Choose View > Show File Names. Synced audio file names stay hidden unless you’ve told DaVinci Resolve to show the original file names. 2 Choose View > Overlay Synced Audio File Names. Now the synced audio file names should sit over the audio clips in the Timelines, and the video file names over the video clips in the Timelines, even where they’re synced.
+
+Viewing the synced audio file names in the Edit page Timeline
+
+### Detach Synced Audio from Video
+
+Now and then you’ll need to pull the synced audio away from its video clips. That helps when a workflow has to ready the timeline for sound post through either media management or .drt exports of the sound alone, leaving the video files out. You can fire this off from the Edit page to swap every synced audio element back to the original source audio media in the media pool. The option lives at Timeline > Audio > Detach Synced Audio from Video.

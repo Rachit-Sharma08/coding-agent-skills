@@ -1,0 +1,12 @@
+{"schema_version": 1, "topics": [
+  {"topic": "Managing projects and project libraries", "file": "references/projects/managing-projects-and-project-libraries/INDEX.md", "summary": "Open when working with Managing projects and project libraries controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Project settings", "file": "references/projects/project-settings/INDEX.md", "summary": "Open when working with Project settings controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Cloud review integrations", "file": "references/projects/cloud-review-integrations/INDEX.md", "summary": "Open when working with Cloud review integrations controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Cloud overview", "file": "references/projects/cloud-overview/INDEX.md", "summary": "Open when working with Cloud overview controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Blackmagic cloud storage", "file": "references/projects/blackmagic-cloud-storage/INDEX.md", "summary": "Open when working with Blackmagic cloud storage controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Blackmagic cloud presentations", "file": "references/projects/blackmagic-cloud-presentations/INDEX.md", "summary": "Open when working with Blackmagic cloud presentations controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Managing project libraries and project servers", "file": "references/projects/managing-project-libraries-and-project-servers/INDEX.md", "summary": "Open when working with Managing project libraries and project servers controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Collaborative workflow", "file": "references/projects/collaborative-workflow/INDEX.md", "summary": "Open when working with Collaborative workflow controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Remote grading and remote monitor", "file": "references/projects/remote-grading-and-remote-monitor/INDEX.md", "summary": "Open when working with Remote grading and remote monitor controls, procedures, or conditions.", "keywords": []},
+  {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translations"]}
+]}
