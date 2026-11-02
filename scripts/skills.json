@@ -1,6 +1,6 @@
 {
-  "skills": 208,
-  "with_own_license": 20,
+  "skills": 209,
+  "with_own_license": 21,
   "names": [
     "ab-testing",
     "ad-creative",
@@ -87,6 +87,7 @@
     "gha-security-review",
     "ghidra",
     "ghidra-mcp-analysis",
+    "hallmark",
     "high-end-visual-design",
     "hyperframes",
     "hyperframes-cli",

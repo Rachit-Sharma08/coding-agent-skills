@@ -1,6 +1,6 @@
 # Skill Catalog
 
-All **208** skills in this repo, A–Z. Click a skill name to open its folder;
+All **209** skills in this repo, A–Z. Click a skill name to open its folder;
 every folder has a `SKILL.md` with the full instructions the agent loads.
 
 > Regenerate this file with `python scripts/build_catalog.py` after adding or editing a skill.
@@ -92,6 +92,7 @@ every folder has a `SKILL.md` with the full instructions the agent loads.
 | [`gha-security-review`](skills/gha-security-review/) | GitHub Actions security review for workflow exploitation vulnerabilities. |
 | [`ghidra`](skills/ghidra/) | Reverse engineering a binary with Ghidra's headless analyzer - decompile executables, extract functions, strings and symbols, and analyze call graphs without… |
 | [`ghidra-mcp-analysis`](skills/ghidra-mcp-analysis/) | Use for reverse engineering and binary analysis with LaurieWired/GhidraMCP. |
+| [`hallmark`](skills/hallmark/) | Design skill for websites and new pages that look designed, not generated. _(see skill LICENSE)_ |
 | [`high-end-visual-design`](skills/high-end-visual-design/) | The user wants a website or component to feel expensive/agency-grade, or says a design looks cheap/generic. |
 | [`hyperframes`](skills/hyperframes/) | Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts… |
 | [`hyperframes-cli`](skills/hyperframes-cli/) | The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus… |
